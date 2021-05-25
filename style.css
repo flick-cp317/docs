@@ -5,17 +5,13 @@
 }
 
 #sidebar {
-  background-color: #ebebeb;
+  background-color: #cad9e3;
   position: fixed;
   overflow-y: auto;
   width: 15%;
   height: 100%;
   left: 0;
   top: 0;
-}
-
-.sidebar-header {
-  margin-bottom: 10px;
 }
 
 #sidebar::-webkit-scrollbar {
@@ -46,6 +42,10 @@
 
 #sidebar-container {
   margin: 26px;
+}
+
+#sidebar-container img{
+  width: 80%;
 }
 
 .section {
