@@ -3,9 +3,11 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 <head>
   <title>Flick</title>
+  <script src="script.js"></script>
 </head>
-<body>
+<body onresize="handleResize()">
   <div id="sidebar">
+    <img id="menu-button" src="assets/hamburger_icon.svg" onmousedown="changeMenu()">
     <div id="sidebar-container">
       <img src="assets/flick-logo.svg" alt="">
       <div class="section">
@@ -82,24 +84,7 @@
     </div>
   </div>
   <div id="content">
-    <script>
-      function changeMenu() {
-        menuID = document.getElementById ("sidebar")
-        contentID = document.getElementById("content")
-        if (menuID.style.display =="none") {
-          menuID.style.display ="block";
-          contentID.style.width ="75%";
-          menuID.style.width="25%";
-        }
-        else {
-          menuID.style.display ="none";
-          contentID.style.width ="100%";
-        }
-      }
-      </script>
-  
     <div id="content-container">
-      <img id = 'menuButton' src = "assets/Hamburger_icon.svg" onmousedown="changeMenu()">
       <h1 id="intro">1. Introduction</h1>
       <div class="section-info">
         <h2 id="intro-purpose">1.1 Purpose</h2>

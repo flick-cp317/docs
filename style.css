@@ -27,12 +27,23 @@
   min-height: 100%;
 }
 
+#menu-button {
+  margin-left: 20px;
+  margin-top: 35px;
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
 @media only screen and (max-width: 1520px) {
   #content {
-    width: 75%;
+    width: 70%;
   }
   #sidebar {
-    width: 25%;
+    width: 30%;
+  }
+  #menu-button {
+    display: block;
   }
 }
 
