@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   font-family: system-ui;
+  scroll-behavior: smooth;
 }
 
 #sidebar {
@@ -55,7 +56,7 @@
   margin: 26px;
 }
 
-#sidebar-container img{
+#sidebar-container img {
   width: 80%;
 }
 
@@ -98,8 +99,24 @@
   margin-left: 20px;
   font-size: 20px;
   margin-bottom: 10px;
+  max-width: 80%;
 }
 
-#content h1, h2 {
+#content h1,
+h2,
+h3 {
   margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 21px;
+  margin-left: 15px;
+}
+
+.subsubsection {
+  margin-left: 30px;
+}
+
+.subsubsection ul {
+  font-size: 15px;
 }
