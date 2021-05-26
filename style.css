@@ -13,6 +13,7 @@
   height: 100%;
   left: 0;
   top: 0;
+  transition: 0.2s;
 }
 
 #sidebar::-webkit-scrollbar {
@@ -26,6 +27,7 @@
   right: 0;
   width: 85%;
   min-height: 100%;
+  transition: 0.2s;
 }
 
 #menu-button {
