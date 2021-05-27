@@ -118,6 +118,9 @@ h3 {
 .subsubsection {
   margin-left: 30px;
 }
+.subsubsection img{
+  width: 50%;
+}
 
 .subsubsection ul {
   font-size: 15px;
