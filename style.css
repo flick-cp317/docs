@@ -73,6 +73,10 @@
   color: #000000 !important;
 }
 
+.section-header:hover {
+  color: white !important;
+}
+
 .subsections {
   margin-left: 20px;
 }
@@ -81,6 +85,10 @@
   font-size: 18px;
   text-decoration: none;
   color: #000000 !important;
+}
+
+.subsection-header:hover {
+  color: white !important;
 }
 
 .subsection-num {
@@ -118,6 +126,7 @@ h3 {
 .subsubsection {
   margin-left: 30px;
 }
+
 .subsubsection img {
   width: 50%;
 }
