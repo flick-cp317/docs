@@ -154,3 +154,15 @@ h3 {
 .content-table th {
   padding: 5px;
 }
+
+.SQA-fixed {
+  background-color: #c1e3c2;
+}
+
+.SQA-dismissed {
+  background-color: #ffbfbf;
+}
+
+.SQA-tbd {
+  background-color: #fcf8bd;
+}
