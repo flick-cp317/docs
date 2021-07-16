@@ -1,647 +1,1166 @@
 <!DOCTYPE html>
 <html>
-<link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
 
-<head>
-  <title>Flick</title>
-  <script src="script.js"></script>
-</head>
+  <head>
+    <title>Flick</title>
+    <script src="script.js"></script>
+  </head>
 
-<body>
-  <div id="sidebar">
-    <img id="menu-button" src="assets/hamburger-icon.svg" onclick="changeMenu()" />
+  <body>
+    <div id="sidebar">
+      <img
+        id="menu-button"
+        src="assets/hamburger-icon.svg"
+        onclick="changeMenu()"
+      />
 
-    <!-- Sidebar -->
-    <div id="sidebar-container">
-      <a href="https://flick-cp317.github.io/docs/index.html"><img src="assets/flick-logo.svg" alt="" /></a>
+      <!-- Sidebar -->
+      <div id="sidebar-container">
+        <a href="https://flick-cp317.github.io/docs/index.html"
+          ><img src="assets/flick-logo.svg" alt=""
+        /></a>
 
-      <!-- 1. Introduction -->
-      <div class="section">
-        <a class="section-header" href="#introduction">1. Introduction</a>
-      </div>
+        <!-- 1. Introduction -->
+        <div class="section">
+          <a class="section-header" href="#introduction">1. Introduction</a>
+        </div>
 
-      <!-- 2. Object Classifications -->
-      <div class="section">
-        <a class="section-header" href="#object-classification">2. Object Classification</a>
-      </div>
+        <!-- 2. Object Classifications -->
+        <div class="section">
+          <a class="section-header" href="#object-classification"
+            >2. Object Classification</a
+          >
+        </div>
 
-      <!-- 3. Diagrams -->
-      <div class="section">
-        <a class="section-header" href="#diagrams">3. Diagrams</a>
-        <table class="subsections">
-          <tr>
-            <td><span class="subsection-num">3.1</span></td>
-            <td>
-              <a class="subsection-header" href="#boundary-diagrams">Boundary/Control/Entity Diagrams</a>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="subsection-num">3.2</span></td>
-            <td>
-              <a class="subsection-header" href="#state-diagrams">State Diagrams</a>
-            </td>
-          </tr>
-        </table>
-      </div>
+        <!-- 3. Diagrams -->
+        <div class="section">
+          <a class="section-header" href="#diagrams">3. Diagrams</a>
+          <table class="subsections">
+            <tr>
+              <td><span class="subsection-num">3.1</span></td>
+              <td>
+                <a class="subsection-header" href="#boundary-diagrams"
+                  >Boundary/Control/Entity Diagrams</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td><span class="subsection-num">3.2</span></td>
+              <td>
+                <a class="subsection-header" href="#state-diagrams"
+                  >State Diagrams</a
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
 
-      <!-- 4. Data Dictionary -->
-      <div class="section">
-        <a class="section-header" href="#data-dictionary">4. Data Dictionary</a>
-      </div>
+        <!-- 4. Data Dictionary -->
+        <div class="section">
+          <a class="section-header" href="#data-dictionary"
+            >4. Data Dictionary</a
+          >
+        </div>
 
-      <!-- 5. Version History -->
-      <div class="section">
-        <a class="section-header" href="#version-history">5. Version History</a>
-      </div>
+        <!-- 5. Version History -->
+        <div class="section">
+          <a class="section-header" href="#version-history"
+            >5. Version History</a
+          >
+        </div>
 
-      <!-- 6. SQA -->
-      <div class="section">
-        <a class="section-header" href="#sqa">6. SQA</a>
+        <!-- 6. SQA -->
+        <div class="section">
+          <a class="section-header" href="#sqa">6. SQA</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div id="content">
-    <div id="content-container">
-      <!-- 1. INTRODUCTION -->
-      <h1 id="introduction">1. Introduction</h1>
-      <div class="section-info">
-        <h2>Purpose</h2>
-        <div class="subsection-info"></div>
-        <h2>Product Scope</h2>
-        <div class="subsection-info"></div>
-        <h2>Intended Audience</h2>
-        <div class="subsection-info"></div>
-        <h2>References</h2>
-        <div class="subsection-info"></div>
-      </div>
+    <div id="content">
+      <div id="content-container">
+        <!-- 1. INTRODUCTION -->
+        <h1 id="introduction">1. Introduction</h1>
+        <div class="section-info">
+          <h2>Purpose</h2>
+          <div class="subsection-info">
+            <p>
+              This software design document describes how the requirements in
+              the SRS will be achieved by detailing the architecture and system
+              design of the Flick web application.
+            </p>
+          </div>
+          <h2>Product Scope</h2>
+          <div class="subsection-info">
+            <p>
+              The document will provide a detailed description of software
+              requirements for Flick.
+            </p>
+          </div>
+          <h2>Intended Audience</h2>
+          <div class="subsection-info">
+            <p>
+              The intended audience for this document are the developers of the
+              Flick web application.
+            </p>
+          </div>
+        </div>
 
-      <!-- 2. Planned Implementation -->
-      <h1>2. Planned Implementation</h1>
-      <div class="section-info">
-        <h2>Choice of Language</h2>
-        <div class="subsection-info"></div>
-      </div>
+        <!-- 2. Planned Implementation -->
+        <h1>2. Planned Implementation</h1>
+        <div class="section-info">
+          <div class="subsection-info">
+            <p>
+              The chosen language for the front-end is JavaScript. JavaScript
+              works well with both HTML and CSS to offer interactive web
+              applications. It is also the language that React uses, which is
+              what the team will be using to create the front-end. With
+              versatile functionality, JavaScript has become the go-to language
+              for many web development companies. In addition, there is a large
+              amount of documentation that developers can reference if they are
+              unsure of what to do. <br /><br />
+              The chosen language for the back-end is also JavaScript. However,
+              the back-end will be utilizing Node.js which is a server-side
+              JavaScript run-time environment. Node.js allows for easy
+              communication between the front-end website and the back-end.
+              Using the same language for both the front-end and back-end will
+              also allow for one language to be used across the entirety of the
+              codebase.
+            </p>
+          </div>
+        </div>
 
-      <!-- 3. System Overview -->
-      <h1>3. System Overview</h1>
-      <div class="section-info">
-        <h2>Profile/Account Creation - log in and sign up</h2>
-        <div class="subsection-info"></div>
-        <h2>Movie Selection - develop profile on movie preferences</h2>
-        <div class="subsection-info"></div>
-        <h2>
-          Create/Manage Theatre - view theatres, add watchers, name/rename
-          theatres
-        </h2>
-        <div class="subsection-info"></div>
-        <h2>
-          Theatre Matches - show commonly-liked movies among theatre watchers
-        </h2>
-        <div class="subsection-info"></div>
-        <h2>Notifications - view and delete notifications</h2>
-        <div class="subsection-info"></div>
-      </div>
-
-      <!-- 4. Design Goals -->
-      <h1>4. Design Goals</h1>
-      <div class="section-info"></div>
-
-      <!-- 5. Design Considerations -->
-      <h1>5. Design Considerations</h1>
-      <div class="section-info">
-        <h2>Assumptions</h2>
-        <div class="subsection-info"></div>
-        <h2>Constraints</h2>
-        <div class="subsection-info"></div>
-      </div>
-
-      <!-- 6. System Architecture -->
-      <h1>6. System Architecture</h1>
-      <div class="section-info">
-        <h2>Top Level Diagram</h2>
-        <div class="subsection-info"></div>
-        <h2>Packages</h2>
-        <div class="subsection-info">
-          <p style="color: red">Some stuff here maybe</p>
-          <table class="content-table">
-            <tr>
-              <th><b>Classes</b></th>
-              <th><b>Variables</b></th>
-              <th><b>Methods</b></th>
-            </tr>
-            <tr>
-              <td>User</td>
-              <td>
-                -userID: int64<br />
-                -username: String<br />
-                -password: String <br />
-              </td>
-              <td style="font-size: 18px">
-                +login(username: String, password: String): boolean<br />
-                +updatePrefs(userID: int64, movieID: int64): boolean<br />
-                +resetPrefs(userID: int64): boolean<br />
-                <br />
-                &lt;&lt;constructor&gt;&gt;<br />
-                +User(username: String, password: String): boolean<br />
-                <br />
-                &lt;&lt;getter&gt;&gt;<br />
-                +getUsername(userID: int64): String<br />
-                +getPassword(userID: int64): String<br />
-                <br />
-                &lt;&lt;setter&gt;&gt;<br />
-                +setUsername(userID: int64, username: String): boolean<br />
-                +setPassword(userID: int64, password: String): boolean<br />
-              </td>
-            </tr>
-            <tr>
-              <td>Theatre</td>
-              <td>
-                -theatreID: int64<br />
-                -theatreName: String<br />
-              </td>
-              <td style="font-size: 18px">
-                +addMemberToTheatre(theatreID: int64, userID: int64):
-                boolean<br />
-                +removeMemberFromTheatre(theaterID: int64, userID: int64):
-                boolean<br />
-                <br />
-                &lt;&lt;constructor&gt;&gt;<br />
-                +Theatre(theatreName: String): boolean<br />
-                <br />
-                &lt;&lt;getter&gt;&gt;<br />
-                +getTheatreName(theatreID: int64): String<br />
-                +getTheatresByUser(userID: int64): int64[]<br />
-                +getTheatreMatches(theatreID: int64): int64[]<br />
-                <br />
-                &lt;&lt;setter&gt;&gt;<br />
-                +setTheatreName(theatreID: int64, theatreName: String):
-                Boolean<br />
-              </td>
-            </tr>
-            <tr>
-              <td>Notification</td>
-              <td>
-                -notificationID: int64<br />
-                -notifiedUser: int64<br />
-                -notificationType: enum {THEATREINVITE, NEWMEMBER}<br />
-              </td>
-              <td style="font-size: 18px">
-                +clearUsersNotifications(userID: int64): boolean<br />
-                +clearNotification(notificationID: int64): boolean<br />
-                <br />
-                &lt;&lt;constructor&gt;&gt;<br />
-                +Notification(theatreID: int64, userID: int64): boolean<br />
-                <br />
-                &lt;&lt;getter&gt;&gt;<br />
-                +getNotificationsByUser(userID: int64): Notification[]<br />
-                <br />
-                &lt;&lt;setter&gt;&gt;<br />
-                none
-              </td>
-            </tr>
-            <tr>
-              <td>Record</td>
-              <td>
-                -userID: int64 <br />
-                -movieID: int64 <br />
-                -action: enum {LIKE, DISLIKE} <br />
-                -timestamp: date <br />
-              </td>
-              <td style="font-size: 18px">
-                +wipeRecordsBeforeDate(date: timestamp): boolean<br />
-                <br />
-                &lt;&lt;constructor&gt;&gt;<br />
-                +Record(userID: int64, movieID: int64, action: enum):
-                boolean<br />
-                <br />
-                &lt;&lt;getter&gt;&gt;<br />
-                +getMoviesByUser(userID: int64): int64[]<br />
-                <br />
-                &lt;&lt;setter&gt;&gt;<br />
-                none
-              </td>
-            </tr>
-            <tr>
-              <td>Movie</td>
-              <td>
-                -movieID: int64 <br />
-                -title: String <br />
-                -description: String <br />
-              </td>
-              <td style="font-size: 18px">
-                +addGenreToMovie(movieID: int64, genre: tinyint): boolean<br />
-                <br />
-                &lt;&lt;constructor&gt;&gt;<br />
-                +Movie(title: String, description: String, genres: tinyint[]):
-                boolean<br />
-                <br />
-                &lt;&lt;getter&gt;&gt;<br />
-                +getMovieTitle(movieID: int64): String<br />
-                +getMovieDesc(movieID: int64): String<br />
-                +getMovieGenres(movieID: int64): tinyint[]<br />
-                +getMovieForUser(userID: int64): int64<br />
-                <br />
-                &lt;&lt;setter&gt;&gt;<br />
-                +setMovieTitle(movieID, int64, title: String): boolean<br />
-                +setMovieDesc(movieID: int64, desc: String): boolean
-              </td>
-            </tr>
-          </table>
-
-          <h3>Flick Package Diagram</h3>
-
-          <h3>Flick Views and Class Diagram</h3>
-          <p>
-            → sendInfoToDatabase (writing)<br />
-            ← getInfoFromDatabse (retrieval)
+        <!-- 3. System Overview -->
+        <h1>3. System Overview</h1>
+        <div class="section-info">
+          <p class="subsection-info">
+            Below are the 5 major system components set out in the Software
+            Requirements Specification document (<a href="requirements.html"
+              >SRS</a
+            >). These must be followed in the final implementation:
           </p>
-          <table class="content-table">
-            <tr>
-              <th><b>Controller (Classes)</b></th>
-              <th><b>Variables</b></th>
-              <th><b>Methods</b></th>
-            </tr>
-            <tr>
-              <td>User Notification Controller</td>
-              <td>
-                -backendService : BackendService<br />
-                -notificationID (int64)<br />
-                -userID (int64)<br />
-                -notificationCount(int64)<br />
-              </td>
-              <td>
-                →: +clearNotification (notifiedUser: int64, notificationID:
-                int64)<br />
-                →: +clearAllNotifications(notifiedUser: int64)<br />
-                ←: +displayNotifications (notifiedUser: int64)<br />
-                ←: +countNotification(notifiedUser: int64)<br />
-              </td>
-            </tr>
-            <tr>
-              <td>Theatre Controller</td>
-              <td>
-                -backendService : BackendService<br />
-                -theatreID (int64)<br />
-                -theatreName (String)<br />
-                -validWatcher (Boolean)<br />
-                -userIDs (Array of int64, capped at 100)<br />
-              </td>
-              <td>
-                ←: +accessTheatres (userID: int64)<br />
-                ←: +viewTheatre (theatreID: int64)<br />
-                ←: +viewMatches(theatreID: int64)<br />
-                →: +createTheatre (theatreName: String)<br />
-                ←: +searchWatchers (username: String): int64<br />
-                →: +inviteWatchers (theatreID: int64, inviteeID: int64)<br />
-                →: +leaveTheatre (theatreName:String, userID:int64)<br />
-              </td>
-            </tr>
-            <tr>
-              <td>User Controller</td>
-              <td>
-                -backendService : BackendService<br />
-                -userID (int64)<br />
-                -username (String)<br />
-                -passwordInput (String)<br />
-                -confirmPassword(String)<br />
-              </td>
-              <td>
-                →: +signUp (username: String, passwordInput: String,
-                confirmPassword:String)<br />
-                ←: +checkUserName(username: String): Boolean<br />
-                ←: +verifyPassword(passwordInput:String,
-                confirmPassword(String): Boolean<br />
-                +accessUserProfile (userID: int64)<br />
-                →: +changeUsername (userID: int64, username:String)<br />
-              </td>
-            </tr>
-            <tr>
-              <td>Movie Display Controller</td>
-              <td>
-                -backendService : BackendService<br />
-                -userID (int64)<br />
-                -movieID (int64)<br />
-                -action (Boolean)<br />
-                -timestamp (Date)<br />
-              </td>
-              <td>
-                →: + recordDecision(movieID: int64, userID:int64,
-                action:boolean, timestamp: Date)<br />
-                ←: + retrieveMovie (userID: int64): int64<br />
-                ←: + displayMovie (movieID: int64)<br />
-              </td>
-            </tr>
-          </table>
-
-          <h3>Services</h3>
-          <table class="content-table">
-            <tr>
-              <th><b>Services (Classes)</b></th>
-              <th><b>Variables</b></th>
-              <th><b>Methods</b></th>
-            </tr>
-            <tr>
-              <td>BackendService</td>
-              <td></td>
-              <td>
-                ←: +userLogin(username: String, password:String)<br />
-                →: +createTheatre (theatreName: String)<br />
-                →: +signUp (username: String, password: String)<br />
-                ←: +viewMatches (theatreID: int64)<br />
-                →: +clearNotification (notifiedUser: int64)<br />
-                →: +clearAllNotifications(notifiedUser: int64)<br />
-                →: +inviteWatchers (theatreID: int64, inviteeID: int64)<br />
-                →: +leaveTheatre (theatreName:String, userID:int64)<br />
-                →: +recordDecision(movieID: int64, userID:int64,
-                action:Boolean, timestamp: Date)<br />
-                →: +changeUsername (userID: int64, username:String)<br />
-                →: +checkUserName(username: String): Boolean<br />
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-
-      <!-- 7. UML -->
-      <h1>UML</h1>
-      <div class="section-info">
-        <h2>Top-Level Diagram</h2>
-        <div class="subsection-info"></div>
-      </div>
-
-      <!-- 8. Interface Descriptions -->
-      <h1>Interface Descriptions</h1>
-      <div class="section-info">
-        <h2>UserLoginView</h2>
-        <div class="subsection-info">
-          <table class="content-table">
-            <tr>
-              <th><b>Field</b></th>
-              <th><b>Type</b></th>
-              <th><b>Description</b></th>
-            </tr>
-            <tr>
-              <td>login-username</td>
-              <td>Input text</td>
-              <td>The name of the user to verify</td>
-            </tr>
-            <tr>
-              <td>login-password</td>
-              <td>Input password</td>
-              <td>The password of the user to verify</td>
-            </tr>
-            <tr>
-              <td>login-button</td>
-              <td>Input button</td>
-              <td>Signs into Flick</td>
-            </tr>
-            <tr>
-              <td>sign-up-button</td>
-              <td>anchor</td>
-              <td>Redirects to SignUpView</td>
-            </tr>
-            <tr>
-              <td>login-error</td>
-              <td>textbox</td>
-              <td>
-                Displays an error if the username/password combination is
-                incorrect
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-
-
-      <!-- 6.  -->
-      <h1>API Overview</h1>
-      <div class="section-info">
-        <h2>UserLoginView</h2>
-        <div class="subsection-info">
-          <table class="content-table">
-            <tr>
-              <th><b>API</b></th>
-              <th><b>Description</b></th>
-              <th><b>Parameters</b></th>
-              <th><b>Response</b></th>
-
-            </tr>
-            <tr>
-              <td> User </td>
-              <td>New User <br>
-                POST /api/user/new/</td>
-              <td>Input text</td>
-              <td>The name of the user to verify</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Login <br> POST /api/user/login/</td>
-              <td>username: String
-                <br>
-                password: String
-              </td>
-              <td>token: String <br> userID: int
-              </td>
-            </tr>
-
-            <tr>
-              <td> </td>
-              <td>Get User Info <br>
-                GET /api/user/?id/
-              </td>
-              <td></td>
-              <td>username: String <br>
-                userid: int
-              </td>
-            </tr>
-
-            <tr>
-              <td></td>
-              <td>Update Username <br>
-                PUT /api/user/?id/username/
-              </td>
-              <td>username: String <br> </td>
-              <td>{}</td>
-            </tr>
-
-            <tr>
-              <td>Movie</td>
-              <td>Get Movie Info <br>
-                GET /api/movie/?id/
-              </td>
-              <td></td>
-              <td>id: int <br>
-                title: String <br>
-                desc: String <br>
-                genres: String[]
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Get Movie For User <br>
-                GET /api/movie/user/?id/
-              </td>
-              <td></td>
-              <td>id: int <br>
-                title: String <br>
-                desc: String <br>
-                genres: String[]</td>
-            </tr>
-
-            <tr>
-              <td>Theatre</td>
-              <td>New Theatre <br>
-                POST /api/theatre/new/
-              </td>
-              <td>foundingUser: int <br>
-                name: String
-              </td>
-              <td>id: int</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>View Theatre Members <br>
-                GET /api/theatre/?id/members/
-              </td>
-              <td></td>
-              <td>members: User[]</td>
-            </tr>
-
-            <tr>
-              <td></td>
-              <td>View Theatre Matches <br>
-                GET /api/theatre/?id/matches/
-              </td>
-              <td></td>
-              <td>matches: Movie[]</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>View Theatre Name <br>
-                GET /api/theatre/?id/name/
-              </td>
-              <td></td>
-              <td>theatreName: String</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Add Members <br>
-                POST /api/theatre/?id/add/
-              </td>
-              <td>username: String</td>
-              <td>{}</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Removing Members <br>
-                DELETE /api/theatre/?id/remove/
-              </td>
-              <td>username: int</td>
-              <td>{}</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Getting the User’s Theatres <br>
-                GET /api/theatre/user/?id/
-              </td>
-              <td></td>
-              <td>theatres: Theatre[]</td>
-            </tr>
-            <tr>
-              <td>Record</td>
-              <td> Add Record <br>
-                POST /api/record/
-                </td>
-              <td>user: int <br>
-                movie: int <br>
-                action: boolean
-                </td>
-              <td>{}</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Getting User’s Liked Movies <br>
-                GET /api/record/?id/
-                </td>
-              <td></td>
-              <td>movies: Movie[]</td>
-            </tr>
-            <tr>
-              <td>Notification</td>
-              <td>Display User’s Notifications <br>
-                GET /api/notification/?id/
-                </td>
-              <td>
-
-              </td>
-              <td>notifications: Notification[]</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Clear Individual Notification <br>
-                DELETE /api/notification/?id/
-                </td>
-              <td></td>
-              <td>{}</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Clear Notifications By User <br>
-                DELETE /api/notification/user/?id/
-                </td>
-              <td></td>
-              <td>{}</td>
-            </tr>
-          </table>
-        </div>
-
-        <h2>User API (6.1)</h2>
-        <div class="subsection-info">
-          <h3>POST /api/user/new/</h3>
-          <div>
-            <ul>
-              <li>Adds a new user to the database</li>
-              <li>Parameters</li>
-              <ul>
-                <li>username: string</li>
-                <li>password: string</li>
-              </ul>
-              <li>Parameters example</li>
+          <h2>Profile/Account Creation</h2>
+          <div class="subsection-info">
+            When the user accesses the Flick site, they will be directed to the
+            login page. Here the user will be able to fill in their credentials
+            to access the main functionality of the site. <br />
+            <ul class="subsubsection">
+              <li>
+                If the credentials are invalid (e.g. do not exist), then the
+                user will stay on the profile creation page until a valid set of
+                credentials are entered.
+              </li>
+              <li>
+                If they don’t have an account, the user will be directed to the
+                profile creation page, where they have to create an account.
+              </li>
+              <li>
+                If the username is already registered within the Flick database,
+                the user will stay on the profile creation page until a unique
+                username is entered.<br />
+                - The profile creation process also requires a valid
+                password.<br />
+                - A valid password needs to be 8 characters in length.
+              </li>
             </ul>
+          </div>
+          <h2>Movie Selection</h2>
+          <div class="subsection-info">
+            Flick will generate a list of 10 movies based on a user’s movie
+            preferences. This list is shown to the user who will select movies
+            that they want to watch to refine the profile of their movie
+            preferences.
+            <ul class="subsubsection">
+              <li>
+                The default preferences profile will be set to equal ratings for
+                all genres
+              </li>
+              <li>
+                Each selected movie will update the user’s rating of the main
+                genre for that movie<br />
+                - The genre rating for selected movies will increase<br />
+                - The genre rating for non-selected movies will decrease
+              </li>
+              <li>
+                The composition of genre ratings will determine the list of
+                movies that the user will be subsequently shown<br />
+                - The list of movies will be updated continuously after each
+                change in rating<br />
+                - After each selection, a new movie will be added to the list to
+                maintain a constant number of movies<br />
+                - Random movies are introduced every 10 choices
+              </li>
+              <li>
+                The user’s choice for each movie will be recorded to keep track
+                of movies that have already been shown<br />
+                - Will prevent repetitions of movies shown to users
+              </li>
+            </ul>
+          </div>
+          <h2>Create/Manage Theatre</h2>
+          <div class="subsection-info">
+            All users will have the ability to:
+            <ul class="subsubsection">
+              <li>
+                Create theatres - This can be done by selecting the “Create
+                Theatre” button within the view theatres tab. There is no limit
+                to the number of theatres one user can make. Once a valid
+                theatre is created, Flick’s database will be updated
+                accordingly.
+              </li>
+              <li>
+                Add watchers to a theatre - This can be done by selecting the
+                desired theatre, choosing the “settings” button, clicking the
+                “Add Watchers” button, searching for the desired user name and
+                selecting the “invite” button next to their username. There will
+                be no limit to the number of members within one theatre. Once a
+                valid watcher (i.e. username exists in the database) is added to
+                the theatre, Flicks database will be updated accordingly.
+              </li>
+              <li>
+                Rename a theatre - This can be done by selecting the desired
+                theatre, choosing the “settings” button, clicking the “edit”
+                button beside the current theatre name and typing in the new
+                theatre name. The theatre name can be changed as many times and
+                it requires:<br />
+                - A minimum length of 3 characters<br />
+                - The name is not found on Flicks “blacklist” (names not allowed
+                to used)
+              </li>
+            </ul>
+          </div>
+          <h2>Theatre Matches</h2>
+          <div class="subsection-info">
+            To view the commonly-liked movies among the theatre watchers, the
+            user will have to select the desired theatre and select the “View
+            Matches” button. The records of all theatre watchers will be
+            compared and common movies will be displayed. From this page, the
+            user will not have any ability to manipulate the data presented. The
+            contents of the page will only be changed through the individual
+            theatre watcher’s movie selections.
+          </div>
+          <h2>Notifications</h2>
+          <div class="subsection-info">
+            All users will have their own notifications view.
+            <ul class="subsubsection">
+              <li>
+                An icon will appear to show users that they have new
+                notifications to review
+              </li>
+              <li>
+                A list of all notifications is displayed on the user’s profile
+                page
+              </li>
+              <li>
+                User can delete:<br />
+                - Individual Notifications - This can be done by clicking on a
+                trash can icon to the side of the notification<br />
+                - All Notifications - This can be done by selecting the “Clear
+                All” button at the top of the list
+              </li>
+            </ul>
+          </div>
+        </div>
 
-            <pre >
-              <code>
-                {
-                “username”: “TestUser”,
-                “password”: “password123”,
-                }
-              </code>
-            </pre>
-
+        <!-- 4. Design Considerations -->
+        <h1>4. Design Considerations</h1>
+        <div class="section-info">
+          <h2>Assumptions and Dependencies</h2>
+          <div class="subsection-info">
+            We will assume that the user won’t submit empty inputs (i.e., the
+            user will always enter some text before clicking input buttons).
+          </div>
+          <h2>Constraints</h2>
+          <div class="subsection-info">
+            User inputs will have certain constraints based on length.
+            <ul class="subsubsection">
+              <li>Passwords must be between 8 - 16 characters long</li>
+              <li>Usernames must be between 3 - 25 characters long</li>
+              <li>Theatre Names must be between 3 - 30 characters long</li>
+            </ul>
+            <br />
+            Other constraints include:
             <ul>
-              <li>Response</li>
-              <ul>
-                <li>userid: int</li>
-              </ul>
-              <li>Response example</li>
+              <li>The maximum number of watchers in a Theatre is 100</li>
+            </ul>
+          </div>
+          <h2>Goals and Guidelines</h2>
+          <div class="subsection-info"></div>
+          <h2>Policies</h2>
+          <div class="subsection-info"></div>
+        </div>
+
+        <!-- 5. System Architecture -->
+        <h1>5. System Architecture</h1>
+        <div class="section-info">
+          <h2>Top Level Diagram</h2>
+          <div class="subsection-info">
+            <img src="assets/top level diagram.PNG" />
+          </div>
+          <h2>Front-End Package</h2>
+          <div class="subsection-info">
+            <h3>Flick High-Level Packages</h3>
+            <img src="assets/high level packages.PNG" />
+            <h3>Flick Views and Class Diagrams</h3>
+            <img src="assets/views and class diagrams.PNG" />
+          </div>
+          <h2>Back-end Package</h2>
+          <div class="subsection-info">
+            <h3>High Level Package Diagram</h3>
+            <img src="assets/high level package diagram.PNG" />
+            <h3>Back-End Class Diagram</h3>
+            <img src="assets/back end class diagram 1.PNG" />
+            <img src="assets/back end class diagram 2.PNG" />
+            <h3>Database Diagram</h3>
+            <img src="assets/database diagram.PNG" />
+          </div>
+        </div>
+
+        <!-- 6. API Overview -->
+        <h1>6. API Overview</h1>
+        <div class="section-info">
+          <h2>UserLoginView</h2>
+          <div class="subsection-info">
+            *Each response may return an error message
+            <table class="content-table">
+              <tr>
+                <th><b>API</b></th>
+                <th><b>Description</b></th>
+                <th><b>Parameters</b></th>
+                <th><b>Response</b></th>
+              </tr>
+              <tr>
+                <td rowspan="4">User</td>
+                <td>
+                  New User <br />
+                  POST /api/user/new/
+                </td>
+                <td>Input text</td>
+                <td>The name of the user to verify</td>
+              </tr>
+              <tr>
+                <td>
+                  Login <br />
+                  POST /api/user/login/
+                </td>
+                <td>
+                  username: String
+                  <br />
+                  password: String
+                </td>
+                <td>
+                  token: String <br />
+                  userID: int
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Get User Info <br />
+                  GET /api/user/?id/
+                </td>
+                <td></td>
+                <td>
+                  username: String <br />
+                  userid: int
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Update Username <br />
+                  PUT /api/user/?id/username/
+                </td>
+                <td>username: String <br /></td>
+                <td>{}</td>
+              </tr>
+
+              <tr>
+                <td rowspan="2">Movie</td>
+                <td>
+                  Get Movie Info <br />
+                  GET /api/movie/?id/
+                </td>
+                <td></td>
+                <td>
+                  id: int <br />
+                  title: String <br />
+                  desc: String <br />
+                  genres: String[]
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Get Movie For User <br />
+                  GET /api/movie/user/?id/
+                </td>
+                <td></td>
+                <td>
+                  id: int <br />
+                  title: String <br />
+                  desc: String <br />
+                  genres: String[]
+                </td>
+              </tr>
+
+              <tr>
+                <td rowspan="7">Theatre</td>
+                <td>
+                  New Theatre <br />
+                  POST /api/theatre/new/
+                </td>
+                <td>
+                  foundingUser: int <br />
+                  name: String
+                </td>
+                <td>id: int</td>
+              </tr>
+              <tr>
+                <td>
+                  View Theatre Members <br />
+                  GET /api/theatre/?id/members/
+                </td>
+                <td></td>
+                <td>members: User[]</td>
+              </tr>
+
+              <tr>
+                <td>
+                  View Theatre Matches <br />
+                  GET /api/theatre/?id/matches/
+                </td>
+                <td></td>
+                <td>matches: Movie[]</td>
+              </tr>
+              <tr>
+                <td>
+                  View Theatre Name <br />
+                  GET /api/theatre/?id/name/
+                </td>
+                <td></td>
+                <td>theatreName: String</td>
+              </tr>
+              <tr>
+                <td>
+                  Add Members <br />
+                  POST /api/theatre/?id/add/
+                </td>
+                <td>username: String</td>
+                <td>{}</td>
+              </tr>
+              <tr>
+                <td>
+                  Removing Members <br />
+                  DELETE /api/theatre/?id/remove/
+                </td>
+                <td>username: int</td>
+                <td>{}</td>
+              </tr>
+              <tr>
+                <td>
+                  Getting the User’s Theatres <br />
+                  GET /api/theatre/user/?id/
+                </td>
+                <td></td>
+                <td>theatres: Theatre[]</td>
+              </tr>
+              <tr>
+                <td rowspan="2">Record</td>
+                <td>
+                  Add Record <br />
+                  POST /api/record/
+                </td>
+                <td>
+                  user: int <br />
+                  movie: int <br />
+                  action: boolean
+                </td>
+                <td>{}</td>
+              </tr>
+              <tr>
+                <td>
+                  Getting User’s Liked Movies <br />
+                  GET /api/record/?id/
+                </td>
+                <td></td>
+                <td>movies: Movie[]</td>
+              </tr>
+              <tr>
+                <td rowspan="3">Notification</td>
+                <td>
+                  Display User’s Notifications <br />
+                  GET /api/notification/?id/
+                </td>
+                <td></td>
+                <td>notifications: Notification[]</td>
+              </tr>
+              <tr>
+                <td>
+                  Clear Individual Notification <br />
+                  DELETE /api/notification/?id/
+                </td>
+                <td></td>
+                <td>{}</td>
+              </tr>
+              <tr>
+                <td>
+                  Clear Notifications By User <br />
+                  DELETE /api/notification/user/?id/
+                </td>
+                <td></td>
+                <td>{}</td>
+              </tr>
+            </table>
+          </div>
+
+          <h2>User API</h2>
+          <div class="subsection-info">
+            <table class="content-table">
+              <tr>
+                <th><b>Method</b></th>
+                <th><b>Description</b></th>
+                <th><b>Parameters</b></th>
+                <th><b>Parameters Example</b></th>
+                <th><b>Response</b></th>
+                <th><b>Response Example</b></th>
+              </tr>
+              <tr>
+                <td>POST /api/user/new/</td>
+                <td>Adds a new user to the database</td>
+                <td>
+                  username: string<br />
+                  password: string
+                </td>
+                <td>
+                  {<br />
+                  “username”: “TestUser”,<br />
+                  “password”: “password123”,<br />
+                  }
+                </td>
+                <td>userid: int</td>
+                <td>
+                  {<br />
+                  “userid”: “18273897238012984710928631”,<br />
+                  }
+                </td>
+              </tr>
+              <tr>
+                <td>POST /api/user/login/</td>
+                <td>Logs in a user</td>
+                <td>
+                  username: string<br />
+                  password: string
+                </td>
+                <td>
+                  {<br />
+                  “username”: “TestUser”,<br />
+                  “password”: “password123”,<br />
+                  }
+                </td>
+                <td>token: string</td>
+                <td>
+                  Response example {<br />
+                  “token”:
+                  “eyJhbGcVCJ9.eyJ1c2VyaWUxNjIzOTAyMn0.1m6xC6ru6NEKwNI”,<br />
+                  }
+                </td>
+              </tr>
+              <tr>
+                <td>GET /api/user/?id/</td>
+                <td>Gets a user’s information</td>
+                <td>N/A</td>
+                <td></td>
+                <td>
+                  username: string<br />
+                  userid: int<br />
+                </td>
+                <td>
+                  {<br />
+                  “username”: “TestUser”,<br />
+                  “userid”: “123847982379273984892”,<br />
+                  }
+                </td>
+              </tr>
+              <tr>
+                <td>PUT /api/user/?id/username/</td>
+                <td>Updates a user’s username</td>
+                <td>username: string</td>
+                <td>
+                  {<br />
+                  “username”: “NewUsername”,<br />
+                  }
+                </td>
+                <td>N/A</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+
+          <h2>Movie API</h2>
+          <div class="subsection-info">
+            <table class="content-table">
+              <tr>
+                <th><b>Method</b></th>
+                <th><b>Description</b></th>
+                <th><b>Parameters</b></th>
+                <th><b>Parameters Example</b></th>
+                <th><b>Response</b></th>
+                <th><b>Response Example</b></th>
+              </tr>
+              <tr>
+                <td>GET /api/movie/?id/</td>
+                <td>Gets information about a movie</td>
+                <td>N/A</td>
+                <td></td>
+                <td>
+                  id: int<br />
+                  title: String<br />
+                  desc: String<br />
+                  genres: int[]
+                </td>
+                <td>
+                  {<br />
+                  “id”: “12389827198729”,<br />
+                  “title”: “Shrek 2”,<br />
+                  “desc”: “Description”,<br />
+                  “genres”: [2, 3],<br />
+                  }
+                </td>
+              </tr>
+              <tr>
+                <td>GET /api/movie/user/?id/</td>
+                <td>Gets a movie based on a specific user’s recommendations</td>
+                <td>N/A</td>
+                <td></td>
+                <td>
+                  id: int<br />
+                  title: String<br />
+                  desc: String<br />
+                  genres: int[]
+                </td>
+                <td>
+                  {<br />
+                  “id”: “12389827198729”,<br />
+                  “title”: “Shrek 2”,<br />
+                  “desc”: “Description”,<br />
+                  “genres”: [2, 3],<br />
+                  }
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <h2>Theatre API</h2>
+          <div class="subsection-info">
+            <table class="content-table">
+              <tr>
+                <th><b>Method</b></th>
+                <th><b>Description</b></th>
+                <th><b>Parameters</b></th>
+                <th><b>Parameters Example</b></th>
+                <th><b>Response</b></th>
+                <th><b>Response Example</b></th>
+              </tr>
+              <tr>
+                <td>POST /api/theatre/new/</td>
+                <td>Creates a new theatre</td>
+                <td>name: String</td>
+                <td>
+                  {<br />
+                  “name”: “Theatre Name”,<br />
+                  }
+                </td>
+                <td>id: int</td>
+                <td>
+                  {<br />
+                  “id”: 1829389021908,<br />
+                  }
+                </td>
+              </tr>
+              <tr>
+                <td>GET /api/theatre/?id/members/</td>
+                <td>Gets the members in a certain theatre</td>
+                <td>N/A</td>
+                <td></td>
+                <td>members: Object[]</td>
+                <td>
+                  {<br />
+                  “members”:<br />
+                  [<br />
+                  {<br />
+                  “username”: “User1”,<br />
+                  “userid”: 1232152126,<br />
+                  },<br />
+                  {<br />
+                  “username”: “User2”,<br />
+                  “userid”: 7654234876,<br />
+                  },<br />
+                  {<br />
+                  “username”: “User3”,<br />
+                  “userid”: 2987886334,<br />
+                  },<br />
+                  ],<br />
+                  }
+                </td>
+              </tr>
+              <tr>
+                <td>GET /api/theatre/?id/matches/</td>
+                <td>Gets the matches for a theatre</td>
+                <td>N/A</td>
+                <td></td>
+                <td>matches: Object[]</td>
+                <td>
+                  {<br />
+                  “matches”:<br />
+                  [<br />
+                  {<br />
+                  “id”: “12389827198729”,<br />
+                  “title”: “Shrek 2”,<br />
+                  “desc”: “Description”,<br />
+                  “genres”: [2, 3],<br />
+                  },<br />
+                  {<br />
+                  “id”: “23827198749847”,<br />
+                  “title”: “Shrek 3”,<br />
+                  “desc”: “Movie”,<br />
+                  “genres”: [1, 2],<br />
+                  },<br />
+                  ],<br />
+                  }
+                </td>
+              </tr>
+              <tr>
+                <td>POST /api/theatre/?id/add/</td>
+                <td>Add a new member to a theatre</td>
+                <td>user: int</td>
+                <td>
+                  {<br />
+                  “user”: 1635456453348,<br />
+                  }<br />
+                </td>
+                <td>N/A</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>DELETE /api/theatre/?id/remove/</td>
+                <td>Remove a member from a theatre</td>
+                <td>user: int</td>
+                <td>
+                  {<br />
+                  “user”: 1635456453348,<br />
+                  }
+                </td>
+                <td>N/A</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>GET /api/theatre/user/?id/</td>
+                <td>Gets a user’s theatres</td>
+                <td>N/A</td>
+                <td></td>
+                <td>theatres: Object[]</td>
+                <td>
+                  {<br />
+                  “theatres”: <br />
+                  [<br />
+                  {<br />
+                  “id”: 123908392189,<br />
+                  “name”: “Theatre Name”,<br />
+                  },<br />
+                  {<br />
+                  “id”: 756745675676,<br />
+                  “name”: “Second Theatre”,<br />
+                  },<br />
+                  ],<br />
+                  }
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <h2>Record API</h2>
+          <div class="subsection-info">
+            <table class="content-table">
+              <tr>
+                <th><b>Method</b></th>
+                <th><b>Description</b></th>
+                <th><b>Parameters</b></th>
+                <th><b>Parameters Example</b></th>
+                <th><b>Response</b></th>
+                <th><b>Response Example</b></th>
+              </tr>
+              <tr>
+                <td>POST /api/record/</td>
+                <td>Adds a new record to the database</td>
+                <td>
+                  user: int<br />
+                  movie: int<br />
+                  action: boolean<br />
+                </td>
+                <td>
+                  {<br />
+                  “user”: 82938409348902,<br />
+                  “movie”: 32163242375,<br />
+                  “action”: true,<br />
+                  }
+                </td>
+                <td>N/A</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>GET /api/record/?id/</td>
+                <td>Gets a user’s liked movies</td>
+                <td>N/A</td>
+                <td></td>
+                <td>movies: Object[]</td>
+                <td>
+                  {<br />
+                  “movies”: <br />
+                  [<br />
+                  {<br />
+                  “id”: “67545675674940”,<br />
+                  “title”: “Shrek 2”,<br />
+                  “desc”: “Movie”,<br />
+                  “genres”: [2, 3],<br />
+                  },<br />
+                  {<br />
+                  “id”: “23827198749847”,<br />
+                  “title”: “Shrek 3”,<br />
+                  “desc”: “Movie”,<br />
+                  “genres”: [1, 2],<br />
+                  },<br />
+                  ],<br />
+                  }
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2>Notification API</h2>
+          <div class="subsection-info">
+            <table class="content-table">
+              <tr>
+                <th><b>Method</b></th>
+                <th><b>Description</b></th>
+                <th><b>Parameters</b></th>
+                <th><b>Parameters Example</b></th>
+                <th><b>Response</b></th>
+                <th><b>Response Example</b></th>
+              </tr>
+              <tr>
+                <td>GET /api/notification/?id/</td>
+                <td>Gets a user’s notifications</td>
+                <td>N/A</td>
+                <td></td>
+                <td>notifications: Object[]</td>
+                <td>
+                  {<br />
+                  “notifications”: <br />
+                  [<br />
+                  {<br />
+                  “id”: 12321321521,<br />
+                  “type”: 1,<br />
+                  “theatre”: 8321980984902,<br />
+                  },<br />
+                  {<br />
+                  “id”: 65439767809,<br />
+                  “type”: 0,<br />
+                  “theatre”: 1353443745802,<br />
+                  },<br />
+                  ],<br />
+                  }
+                </td>
+              </tr>
+              <tr>
+                <td>DELETE /api/notification/?id/</td>
+                <td>Deletes a single notification</td>
+                <td>N/A</td>
+                <td></td>
+                <td>N/A</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>DELETE /api/notification/user/?id/</td>
+                <td>Deletes all of a user’s notifications</td>
+                <td>N/A</td>
+                <td></td>
+                <td>N/A</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- 7. Interface Descriptions -->
+        <h1>7. Interface Descriptions</h1>
+        <div class="section-info">
+          <h2>Colour Guidelines</h2>
+          <div class="subsection-info">
+            <table class="content-table">
+              <tr>
+                <th><b>Colour</b></th>
+                <th><b>Hex Code</b></th>
+                <th><b>Usage</b></th>
+              </tr>
+              <tr>
+                <td bgcolor="E23A3A"></td>
+                <td>E23A3A</td>
+                <td>
+                  <ul>
+                    <li>Menu Bar</li>
+                    <li>Buttons and button accents</li>
+                    <li>Backgrounds</li>
+                    <li>Icons (on white background)</li>
+                    <li>Logo</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="F0424C"></td>
+                <td>F0424C</td>
+                <td>
+                  <ul>
+                    <li>Error text and background</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="FFB648"></td>
+                <td>FFB648</td>
+                <td>
+                  <ul>
+                    <li>Accent Colour</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="FFFFFF"></td>
+                <td>FFFFFF</td>
+                <td>
+                  <ul>
+                    <li>Interface background</li>
+                    <li>Text</li>
+                    <li>Icons (on colour background)</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="000000"></td>
+                <td>000000</td>
+                <td>
+                  <ul>
+                    <li>Text</li>
+                    <li>Selected icons</li>
+                    <li>Logo</li>
+                    <li>Headings</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="686262"></td>
+                <td>686262</td>
+                <td>
+                  80% Transparency:
+                  <ul>
+                    <li>Subheadings</li>
+                    <li>Placeholder text</li>
+                  </ul>
+                  100% Transparency:
+                  <ul>
+                    <li>Input Text</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="DFDADA"></td>
+                <td>DFDADA</td>
+                <td>
+                  <ul>
+                    <li>Notification background</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="8CACC4"></td>
+                <td>8CACC4</td>
+                <td>
+                  <ul>
+                    <li>User Profile background</li>
+                    <li>Secondary buttons</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="E5E5E5"></td>
+                <td>E5E5E5</td>
+                <td>
+                  <ul>
+                    <li>Selection background</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="C4C4C4"></td>
+                <td>C4C4C4</td>
+                <td>
+                  <ul>
+                    <li>Scroll bar</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <h2>Font Guidelines</h2>
+          <div class="subsection-info">
+            <ul>
+              <li>Manrope (Semi-Bold or Bold) - Headings</li>
+              <li>Manrope (Light) - Subheadings</li>
+              <li>Roboto - Body Text/Input Text</li>
             </ul>
           </div>
 
-          <pre >
-            <code>
-              {
-                “userid”: “18273897238012984710928631”,
-              }
-            </code>
-          </pre>
+          <h2>Module Interface</h2>
+          <div class="subsection-info">
+            <h3>UserLoginView</h3>
 
+            <table class="content-table subsubsection">
+              <tr>
+                <th><b>Field</b></th>
+                <th><b>Type</b></th>
+                <th><b>Description</b></th>
+              </tr>
+              <tr>
+                <td>login-username</td>
+                <td>Input text</td>
+                <td>The name of the user to verify</td>
+              </tr>
+              <tr>
+                <td>login-password</td>
+                <td>Input password</td>
+                <td>The password of the user to verify</td>
+              </tr>
+              <tr>
+                <td>login-button</td>
+                <td>Input button</td>
+                <td>Signs into Flick</td>
+              </tr>
+              <tr>
+                <td>sign-up-button</td>
+                <td>anchor</td>
+                <td>Redirects to SignUpView</td>
+              </tr>
+              <tr>
+                <td>login-error</td>
+                <td>textbox</td>
+                <td>
+                  Displays an error if the username/password combination is
+                  incorrect
+                </td>
+              </tr>
+            </table>
+
+            <h3>SignupView</h3>
+            <table class="content-table subsubsection">
+              <tr>
+                <th><b>Field</b></th>
+                <th><b>Type</b></th>
+                <th><b>Description</b></th>
+              </tr>
+              <tr>
+                <td>sign-up-username</td>
+                <td>Input text</td>
+                <td>The name of the user to create</td>
+              </tr>
+              <tr>
+                <td>sign-up-password</td>
+                <td>Input password</td>
+                <td>The password to the user</td>
+              </tr>
+              <tr>
+                <td>confirm-sign-up-password</td>
+                <td>Input password</td>
+                <td>The confirmed password to the user</td>
+              </tr>
+              <tr>
+                <td>confirm-sign-up-password-error</td>
+                <td>textbox</td>
+                <td>
+                  Displays an error if the confirm-sign-up-password does not
+                  match the sign-up-password
+                </td>
+              </tr>
+              <tr>
+                <td>sign-up-button</td>
+                <td>Input button</td>
+                <td>Signs the user up for Flick</td>
+              </tr>
+              <tr>
+                <td>login-button</td>
+                <td>anchor</td>
+                <td>Redirects to LoginView</td>
+              </tr>
+              <tr>
+                <td>sign-up-username-error</td>
+                <td>textbox</td>
+                <td>
+                  Displays an error if the username is invalid (i.e., already
+                  exists, inappropriate)
+                </td>
+              </tr>
+            </table>
+
+            <h3>UserMovieView</h3>
+            <table class="content-table subsubsection">
+              <tr>
+                <th><b>Field</b></th>
+                <th><b>Type</b></th>
+                <th><b>Description</b></th>
+              </tr>
+              <tr>
+                <td>movie-title</td>
+                <td>textbox</td>
+                <td>Displays the title of the movie</td>
+              </tr>
+              <tr>
+                <td>movie-description</td>
+                <td>textbox</td>
+                <td>Displays the description of the movie</td>
+              </tr>
+              <tr>
+                <td>movie-genres</td>
+                <td>textbox</td>
+                <td>Displays the genres of the movie</td>
+              </tr>
+              <tr>
+                <td>movie-dislike-button</td>
+                <td>Input button</td>
+                <td>Allows user to indicate they dislike the movie</td>
+              </tr>
+              <tr>
+                <td>movie-like-button</td>
+                <td>Input button</td>
+                <td>Allows user to indicate they like the movie</td>
+              </tr>
+              <tr>
+                <td>viewTheatres-button</td>
+                <td>anchor</td>
+                <td>Redirects to UserTheatreView</td>
+              </tr>
+              <tr>
+                <td>viewProfile-button</td>
+                <td>anchor</td>
+                <td>Redirects to UserProfileView</td>
+              </tr>
+              <tr>
+                <td>notifications-alert</td>
+                <td>image</td>
+                <td>Displays how many notifications the user has</td>
+              </tr>
+            </table>
+          </div>
         </div>
 
+        <!-- Stop here autoformat -->
       </div>
-
-      <!-- Stop here autoformat -->
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
