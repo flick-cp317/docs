@@ -26,53 +26,63 @@
           <a class="section-header" href="#introduction">1. Introduction</a>
         </div>
 
-        <!-- 2. Object Classifications -->
+        <!-- 2. Planned Implementation -->
         <div class="section">
-          <a class="section-header" href="#object-classification"
-            >2. Object Classification</a
+          <a class="section-header" href="#planned-implementation"
+            >2. Planned Implementation</a
           >
         </div>
 
-        <!-- 3. Diagrams -->
+        <!-- 3. System Overview -->
         <div class="section">
-          <a class="section-header" href="#diagrams">3. Diagrams</a>
-          <table class="subsections">
-            <tr>
-              <td><span class="subsection-num">3.1</span></td>
-              <td>
-                <a class="subsection-header" href="#boundary-diagrams"
-                  >Boundary/Control/Entity Diagrams</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td><span class="subsection-num">3.2</span></td>
-              <td>
-                <a class="subsection-header" href="#state-diagrams"
-                  >State Diagrams</a
-                >
-              </td>
-            </tr>
-          </table>
+          <a class="section-header" href="#system-overview"
+            >3. System Overview</a
+          >
         </div>
 
-        <!-- 4. Data Dictionary -->
+        <!-- 4. Design Considerations -->
+        <div class="section">
+          <a class="section-header" href="#design-considerations"
+            >4. Design Considerations</a
+          >
+        </div>
+
+        <!-- 5. System Architecture -->
+        <div class="section">
+          <a class="section-header" href="#system-architecture"
+            >5. System Architecture</a
+          >
+        </div>
+
+        <!-- 6. API Overview -->
+        <div class="section">
+          <a class="section-header" href="#api-overview">6. API Overview</a>
+        </div>
+
+        <!-- 7. Interface Descriptions -->
+        <div class="section">
+          <a class="section-header" href="#interface-descriptions"
+            >7. Interface Descriptions</a
+          >
+        </div>
+
+        <!-- 8. Data Dictionary -->
         <div class="section">
           <a class="section-header" href="#data-dictionary"
-            >4. Data Dictionary</a
+            >8. Data Dictionary</a
           >
         </div>
 
-        <!-- 5. Version History -->
+        <!-- 9. Version History -->
         <div class="section">
           <a class="section-header" href="#version-history"
-            >5. Version History</a
+            >9. Version History</a
           >
         </div>
 
-        <!-- 6. SQA -->
+        <!-- 10. SQA -->
         <div class="section">
-          <a class="section-header" href="#sqa">6. SQA</a>
+          <a class="section-header" href="#sqa">10. SQA</a>
         </div>
       </div>
     </div>
@@ -106,7 +116,7 @@
         </div>
 
         <!-- 2. Planned Implementation -->
-        <h1>2. Planned Implementation</h1>
+        <h1 id="planned-implementation">2. Planned Implementation</h1>
         <div class="section-info">
           <div class="subsection-info">
             <p>
@@ -130,7 +140,7 @@
         </div>
 
         <!-- 3. System Overview -->
-        <h1>3. System Overview</h1>
+        <h1 id="system-overview">3. System Overview</h1>
         <div class="section-info">
           <p class="subsection-info">
             Below are the 5 major system components set out in the Software
@@ -262,7 +272,7 @@
         </div>
 
         <!-- 4. Design Considerations -->
-        <h1>4. Design Considerations</h1>
+        <h1 id="design-considerations">4. Design Considerations</h1>
         <div class="section-info">
           <h2>Assumptions and Dependencies</h2>
           <div class="subsection-info">
@@ -290,7 +300,7 @@
         </div>
 
         <!-- 5. System Architecture -->
-        <h1>5. System Architecture</h1>
+        <h1 id="system-architecture">5. System Architecture</h1>
         <div class="section-info">
           <h2>Top Level Diagram</h2>
           <div class="subsection-info">
@@ -316,7 +326,7 @@
         </div>
 
         <!-- 6. API Overview -->
-        <h1>6. API Overview</h1>
+        <h1 id="api-overview">6. API Overview</h1>
         <div class="section-info">
           <h2>UserLoginView</h2>
           <div class="subsection-info">
@@ -532,14 +542,14 @@
                 </td>
                 <td>
                   {<br />
-                  “username”: “TestUser”,<br />
-                  “password”: “password123”,<br />
+                  <b>“username”:</b> “TestUser”,<br />
+                  <b>“password”:</b> “password123”,<br />
                   }
                 </td>
                 <td>userid: int</td>
                 <td>
                   {<br />
-                  “userid”: “18273897238012984710928631”,<br />
+                  <b>“userid”:</b> “18273897238012984710928631”,<br />
                   }
                 </td>
               </tr>
@@ -552,14 +562,14 @@
                 </td>
                 <td>
                   {<br />
-                  “username”: “TestUser”,<br />
-                  “password”: “password123”,<br />
+                  <b>“username”:</b> “TestUser”,<br />
+                  <b>“password”:</b> “password123”,<br />
                   }
                 </td>
                 <td>token: string</td>
                 <td>
-                  Response example {<br />
-                  “token”:
+                  {<br />
+                  <b>“token”:</b>
                   “eyJhbGcVCJ9.eyJ1c2VyaWUxNjIzOTAyMn0.1m6xC6ru6NEKwNI”,<br />
                   }
                 </td>
@@ -575,8 +585,8 @@
                 </td>
                 <td>
                   {<br />
-                  “username”: “TestUser”,<br />
-                  “userid”: “123847982379273984892”,<br />
+                  <b>“username”:</b> “TestUser”,<br />
+                  <b>“userid”:</b> “123847982379273984892”,<br />
                   }
                 </td>
               </tr>
@@ -586,7 +596,7 @@
                 <td>username: string</td>
                 <td>
                   {<br />
-                  “username”: “NewUsername”,<br />
+                  <b>“username”:</b> “NewUsername”,<br />
                   }
                 </td>
                 <td>N/A</td>
@@ -619,10 +629,10 @@
                 </td>
                 <td>
                   {<br />
-                  “id”: “12389827198729”,<br />
-                  “title”: “Shrek 2”,<br />
-                  “desc”: “Description”,<br />
-                  “genres”: [2, 3],<br />
+                  <b>“id”:</b> “12389827198729”,<br />
+                  <b>“title”:</b> “Shrek 2”,<br />
+                  <b>“desc”:</b> “Description”,<br />
+                  <b>“genres”:</b> [2, 3],<br />
                   }
                 </td>
               </tr>
@@ -639,10 +649,10 @@
                 </td>
                 <td>
                   {<br />
-                  “id”: “12389827198729”,<br />
-                  “title”: “Shrek 2”,<br />
-                  “desc”: “Description”,<br />
-                  “genres”: [2, 3],<br />
+                  <b>“id”:</b> “12389827198729”,<br />
+                  <b>“title”:</b> “Shrek 2”,<br />
+                  <b>“desc”:</b> “Description”,<br />
+                  <b>“genres”:</b> [2, 3],<br />
                   }
                 </td>
               </tr>
@@ -666,13 +676,13 @@
                 <td>name: String</td>
                 <td>
                   {<br />
-                  “name”: “Theatre Name”,<br />
+                  <b>“name”:</b> “Theatre Name”,<br />
                   }
                 </td>
                 <td>id: int</td>
                 <td>
                   {<br />
-                  “id”: 1829389021908,<br />
+                  <b>“id”:</b> 1829389021908,<br />
                   }
                 </td>
               </tr>
@@ -684,19 +694,19 @@
                 <td>members: Object[]</td>
                 <td>
                   {<br />
-                  “members”:<br />
+                  <b>“members”:</b><br />
                   [<br />
                   {<br />
-                  “username”: “User1”,<br />
-                  “userid”: 1232152126,<br />
+                  <b>“username”:</b> “User1”,<br />
+                  <b>“userid”:</b> 1232152126,<br />
                   },<br />
                   {<br />
-                  “username”: “User2”,<br />
-                  “userid”: 7654234876,<br />
+                  <b>“username”:</b> “User2”,<br />
+                  <b>“userid”:</b> 7654234876,<br />
                   },<br />
                   {<br />
-                  “username”: “User3”,<br />
-                  “userid”: 2987886334,<br />
+                  <b>“username”:</b> “User3”,<br />
+                  <b>“userid”:</b> 2987886334,<br />
                   },<br />
                   ],<br />
                   }
@@ -710,19 +720,19 @@
                 <td>matches: Object[]</td>
                 <td>
                   {<br />
-                  “matches”:<br />
+                  <b>“matches”:</b><br />
                   [<br />
                   {<br />
-                  “id”: “12389827198729”,<br />
-                  “title”: “Shrek 2”,<br />
-                  “desc”: “Description”,<br />
-                  “genres”: [2, 3],<br />
+                  <b>“id”:</b> “12389827198729”,<br />
+                  <b>“title”:</b> “Shrek 2”,<br />
+                  <b>“desc”:</b> “Description”,<br />
+                  <b>“genres”:</b> [2, 3],<br />
                   },<br />
                   {<br />
-                  “id”: “23827198749847”,<br />
-                  “title”: “Shrek 3”,<br />
-                  “desc”: “Movie”,<br />
-                  “genres”: [1, 2],<br />
+                  <b>“id”:</b> “23827198749847”,<br />
+                  <b>“title”:</b> “Shrek 3”,<br />
+                  <b>“desc”:</b> “Movie”,<br />
+                  <b>“genres”:</b> [1, 2],<br />
                   },<br />
                   ],<br />
                   }
@@ -734,7 +744,7 @@
                 <td>user: int</td>
                 <td>
                   {<br />
-                  “user”: 1635456453348,<br />
+                  <b>“user”:</b> 1635456453348,<br />
                   }<br />
                 </td>
                 <td>N/A</td>
@@ -746,8 +756,8 @@
                 <td>user: int</td>
                 <td>
                   {<br />
-                  “user”: 1635456453348,<br />
-                  }
+                  <b>“user”:</b> 1635456453348,<br />
+                  }<br />
                 </td>
                 <td>N/A</td>
                 <td></td>
@@ -760,15 +770,15 @@
                 <td>theatres: Object[]</td>
                 <td>
                   {<br />
-                  “theatres”: <br />
+                  <b>“theatres”:</b> <br />
                   [<br />
                   {<br />
-                  “id”: 123908392189,<br />
-                  “name”: “Theatre Name”,<br />
+                  <b>“id”:</b> 123908392189,<br />
+                  <b>“name”:</b> “Theatre Name”,<br />
                   },<br />
                   {<br />
-                  “id”: 756745675676,<br />
-                  “name”: “Second Theatre”,<br />
+                  <b>“id”:</b> 756745675676,<br />
+                  <b>“name”:</b> “Second Theatre”,<br />
                   },<br />
                   ],<br />
                   }
@@ -798,9 +808,9 @@
                 </td>
                 <td>
                   {<br />
-                  “user”: 82938409348902,<br />
-                  “movie”: 32163242375,<br />
-                  “action”: true,<br />
+                  <b>“user”:</b> 82938409348902,<br />
+                  <b>“movie”:</b> 32163242375,<br />
+                  <b>“action”:</b> true,<br />
                   }
                 </td>
                 <td>N/A</td>
@@ -814,19 +824,19 @@
                 <td>movies: Object[]</td>
                 <td>
                   {<br />
-                  “movies”: <br />
+                  <b>“movies”:</b> <br />
                   [<br />
                   {<br />
-                  “id”: “67545675674940”,<br />
-                  “title”: “Shrek 2”,<br />
-                  “desc”: “Movie”,<br />
-                  “genres”: [2, 3],<br />
+                  <b>“id”:</b> “67545675674940”,<br />
+                  <b>“title”:</b> “Shrek 2”,<br />
+                  <b>“desc”:</b> “Movie”,<br />
+                  <b>“genres”:</b> [2, 3],<br />
                   },<br />
                   {<br />
-                  “id”: “23827198749847”,<br />
-                  “title”: “Shrek 3”,<br />
-                  “desc”: “Movie”,<br />
-                  “genres”: [1, 2],<br />
+                  <b>“id”:</b> “23827198749847”,<br />
+                  <b>“title”:</b> “Shrek 3”,<br />
+                  <b>“desc”:</b> “Movie”,<br />
+                  <b>“genres”:</b> [1, 2],<br />
                   },<br />
                   ],<br />
                   }
@@ -853,17 +863,17 @@
                 <td>notifications: Object[]</td>
                 <td>
                   {<br />
-                  “notifications”: <br />
+                  <b>“notifications”:</b> <br />
                   [<br />
                   {<br />
-                  “id”: 12321321521,<br />
-                  “type”: 1,<br />
-                  “theatre”: 8321980984902,<br />
+                  <b>“id”:</b> 12321321521,<br />
+                  <b>“type”:</b> 1,<br />
+                  <b>“theatre”:</b> 8321980984902,<br />
                   },<br />
                   {<br />
-                  “id”: 65439767809,<br />
-                  “type”: 0,<br />
-                  “theatre”: 1353443745802,<br />
+                  <b>“id”:</b> 65439767809,<br />
+                  <b>“type”:</b> 0,<br />
+                  <b>“theatre”:</b> 1353443745802,<br />
                   },<br />
                   ],<br />
                   }
@@ -890,7 +900,7 @@
         </div>
 
         <!-- 7. Interface Descriptions -->
-        <h1>7. Interface Descriptions</h1>
+        <h1 id="interface-descriptions">7. Interface Descriptions</h1>
         <div class="section-info">
           <h2>Colour Guidelines</h2>
           <div class="subsection-info">
@@ -1021,7 +1031,7 @@
           <h2>Module Interface</h2>
           <div class="subsection-info">
             <h3>UserLoginView</h3>
-
+            <img src="assets/user login view.PNG" class="mockup" />
             <table class="content-table subsubsection">
               <tr>
                 <th><b>Field</b></th>
@@ -1030,17 +1040,17 @@
               </tr>
               <tr>
                 <td>login-username</td>
-                <td>Input text</td>
+                <td>input text</td>
                 <td>The name of the user to verify</td>
               </tr>
               <tr>
                 <td>login-password</td>
-                <td>Input password</td>
+                <td>input password</td>
                 <td>The password of the user to verify</td>
               </tr>
               <tr>
                 <td>login-button</td>
-                <td>Input button</td>
+                <td>input button</td>
                 <td>Signs into Flick</td>
               </tr>
               <tr>
@@ -1057,8 +1067,10 @@
                 </td>
               </tr>
             </table>
+            <br />
 
             <h3>SignupView</h3>
+            <img src="assets/signup view.PNG" class="mockup" />
             <table class="content-table subsubsection">
               <tr>
                 <th><b>Field</b></th>
@@ -1067,17 +1079,17 @@
               </tr>
               <tr>
                 <td>sign-up-username</td>
-                <td>Input text</td>
+                <td>input text</td>
                 <td>The name of the user to create</td>
               </tr>
               <tr>
                 <td>sign-up-password</td>
-                <td>Input password</td>
+                <td>input password</td>
                 <td>The password to the user</td>
               </tr>
               <tr>
                 <td>confirm-sign-up-password</td>
-                <td>Input password</td>
+                <td>input password</td>
                 <td>The confirmed password to the user</td>
               </tr>
               <tr>
@@ -1090,7 +1102,7 @@
               </tr>
               <tr>
                 <td>sign-up-button</td>
-                <td>Input button</td>
+                <td>input button</td>
                 <td>Signs the user up for Flick</td>
               </tr>
               <tr>
@@ -1107,8 +1119,10 @@
                 </td>
               </tr>
             </table>
+            <br />
 
             <h3>UserMovieView</h3>
+            <img src="assets/user movie view.png" class="mockup" />
             <table class="content-table subsubsection">
               <tr>
                 <th><b>Field</b></th>
@@ -1132,12 +1146,12 @@
               </tr>
               <tr>
                 <td>movie-dislike-button</td>
-                <td>Input button</td>
+                <td>input button</td>
                 <td>Allows user to indicate they dislike the movie</td>
               </tr>
               <tr>
                 <td>movie-like-button</td>
-                <td>Input button</td>
+                <td>input button</td>
                 <td>Allows user to indicate they like the movie</td>
               </tr>
               <tr>
@@ -1155,6 +1169,1286 @@
                 <td>image</td>
                 <td>Displays how many notifications the user has</td>
               </tr>
+            </table>
+            <br />
+
+            <h3>UserProfileView</h3>
+            <img src="assets/user profile view.png" class="mockup" />
+            <table class="content-table subsubsection">
+              <tr>
+                <th><b>Field</b></th>
+                <th><b>Type</b></th>
+                <th><b>Description</b></th>
+              </tr>
+              <tr>
+                <td>user-username</td>
+                <td>textbox</td>
+                <td>Displays the user’s username</td>
+              </tr>
+              <tr>
+                <td>user-userid</td>
+                <td>textbox</td>
+                <td>Displays the user’s id</td>
+              </tr>
+              <tr>
+                <td>change-name</td>
+                <td>textbox</td>
+                <td>Allows users to input a new username</td>
+              </tr>
+              <tr>
+                <td>change-name-button</td>
+                <td>input button</td>
+                <td>Allows user to change their username</td>
+              </tr>
+              <tr>
+                <td>change-name-error</td>
+                <td>textbox</td>
+                <td>Displays an error message if the username is taken</td>
+              </tr>
+              <tr>
+                <td>viewTheatres-button</td>
+                <td>anchor</td>
+                <td>Redirects to ViewTheatreView</td>
+              </tr>
+              <tr>
+                <td>viewMovies-button</td>
+                <td>anchor</td>
+                <td>Redirects to UserMovieView</td>
+              </tr>
+              <tr>
+                <td>viewNotifications</td>
+                <td>textbox</td>
+                <td>Displays the users’ notifications</td>
+              </tr>
+              <tr>
+                <td>clearNotification-button</td>
+                <td>input button</td>
+                <td>Allows user to delete specific notification</td>
+              </tr>
+              <tr>
+                <td>clearAllNotifications-button</td>
+                <td>input button</td>
+                <td>Allows user to delete all notifications</td>
+              </tr>
+            </table>
+            <br />
+
+            <h3>UserTheatreView</h3>
+            <img src="assets/user theatre view.png" class="mockup" />
+            <table class="content-table subsubsection">
+              <tr>
+                <th><b>Field</b></th>
+                <th><b>Type</b></th>
+                <th><b>Description</b></th>
+              </tr>
+              <tr>
+                <td>theatre-name</td>
+                <td>textbox</td>
+                <td>Displays name of the current theatre</td>
+              </tr>
+              <tr>
+                <td>theatre-matches</td>
+                <td>textbox</td>
+                <td>textbox Displays a list of the users’ movie matches</td>
+              </tr>
+              <tr>
+                <td>theatre-userList</td>
+                <td>textbox</td>
+                <td>Displays the usernames of watchers in that theatre</td>
+              </tr>
+              <tr>
+                <td>theatre-theatresList</td>
+                <td>textbox</td>
+                <td>Displays the list of theatres the user is in</td>
+              </tr>
+              <tr>
+                <td>notifications-alert</td>
+                <td>image</td>
+                <td>Displays how many notifications the user has</td>
+              </tr>
+              <tr>
+                <td>theatreInvite-button</td>
+                <td>anchor</td>
+                <td>Redirects to TheatreInvite View</td>
+              </tr>
+              <tr>
+                <td>theatreCreation-button</td>
+                <td>anchor</td>
+                <td>Redirects to TheatreCreation View</td>
+              </tr>
+              <tr>
+                <td>viewProfile-button</td>
+                <td>anchor</td>
+                <td>Redirects to UserProfile View</td>
+              </tr>
+              <tr>
+                <td>viewMovies-button</td>
+                <td>anchor</td>
+                <td>Redirects to UserMovie View</td>
+              </tr>
+            </table>
+            <br />
+
+            <h3>TheatreCreationView</h3>
+            <img src="assets/theatre creation view.png" class="mockup" />
+            <table class="content-table subsubsection">
+              <tr>
+                <th><b>Field</b></th>
+                <th><b>Type</b></th>
+                <th><b>Description</b></th>
+              </tr>
+              <tr>
+                <td>theatre-name</td>
+                <td>input text</td>
+                <td>
+                  Allows users to input name to their newly created theatre
+                </td>
+              </tr>
+              <tr>
+                <td>theatre-create-button</td>
+                <td>input button/anchor</td>
+                <td>
+                  Confirms user inputted theatre name and creates the new
+                  theatre. Redirects to UserTheatre View if successful
+                </td>
+              </tr>
+            </table>
+            <br />
+
+            <h3>TheatreInviteView</h3>
+            <img src="assets/theatre invite view.png" class="mockup" />
+            <p style="color: red">Example: Error Message</p>
+            <img src="assets/theatre invite view error.png" class="mockup" />
+            <table class="content-table subsubsection">
+              <tr>
+                <th><b>Field</b></th>
+                <th><b>Type</b></th>
+                <th><b>Description</b></th>
+              </tr>
+              <tr>
+                <td>invite-name</td>
+                <td>input text</td>
+                <td>Allows user to input name of the invitee</td>
+              </tr>
+              <tr>
+                <td>invite-button</td>
+                <td>input button/anchor</td>
+                <td>
+                  Allows user to invite the invitee and redirects to UserTheatre
+                  View if successful
+                </td>
+              </tr>
+              <tr>
+                <td>invite-error</td>
+                <td>textbox</td>
+                <td>
+                  If above is not successful, it displays an error message
+                  saying entered user does not exist
+                </td>
+              </tr>
+            </table>
+            <br />
+          </div>
+        </div>
+
+        <!-- 8. Data Dictionary -->
+        <h1 id="data-dictionary">8. Data Dictionary</h1>
+        <div class="section-info">
+          <div class="subsection-info">
+            Backend methods that return a Boolean data type return a 1 for a
+            failure/error and a 0 for success unless otherwise stated.
+
+            <div>
+              <table class="content-table">
+                <tbody>
+                  <tr>
+                    <td><strong>Name</strong></td>
+                    <td><strong>Data Type</strong></td>
+                    <td><strong>Description</strong></td>
+                    <td><strong>Constraints</strong></td>
+                  </tr>
+                  <tr>
+                    <td>accessTheatres (userID: int64): {int64, String}</td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Retrieves the list of theatres the user is in from the
+                      Theatre API and returns a dictionary of theatreID and
+                      theatreName (created from JavaScript Object).
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>accessUserProfile (userID: int64): String[]</td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Retrieves the users&rsquo; information from the User API
+                      and displays it to the user. Returns the users&rsquo;
+                      information as an array of Strings.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>action</td>
+                    <td>Boolean</td>
+                    <td>
+                      0 if the user dislikes the movie and 1 if the user likes
+                      the movie.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>ActionForm</td>
+                    <td>Form (frontend)</td>
+                    <td>
+                      Collects the users&rsquo; action (Boolean) -&nbsp; like or
+                      dislike for the movie .
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>addGenreToMovie(genre: tinyint): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Adds another genre to a movie by adding a new row to the
+                      movie genre lookup table.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>addMemberToTheatre(user: User): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Given a userID and theatreID, adds a user to the specified
+                      theatre.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      changeUsername (userID: int64, username:String): Boolean
+                    </td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Updates the user&rsquo;s username with a new inputted
+                      version using the User API. Returns a Boolean value of 1
+                      if username is unavailable.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>checkUserName(username: String): Boolean</td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Checks whether a username is valid using the User API.
+                      Returns a Boolean value of 1 if username is unavailable.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>clearAllNotifications(notifiedUser: int64)</td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Accesses the Notifications API to clear all notifications.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      clearNotification (notifiedUser: int64, notificationID:
+                      int64)
+                    </td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Accesses the Notifications API to clear the specific
+                      notification specified by its notification id.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>clearNotification(): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Removes a specific notification&nbsp; from the database
+                      using the notificationID.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>clearUsersNotifications(): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Removes all notifications in the database for a given
+                      user.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>confirmPassword</td>
+                    <td>String</td>
+                    <td>
+                      The users&rsquo; password inputted a second time to
+                      confirm it was inputted as desired.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>countNotification(notifiedUser: int64): int64</td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Retrieves the total number of present users&rsquo;
+                      notification from the Notifications API and returns the
+                      number as an int64.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>createTheatre (theatreName: String)</td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Sends the theatre information inputted by the user to the
+                      Theatre API.&nbsp;
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>description</td>
+                    <td>String</td>
+                    <td>The description of a movie.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>displayMovie (movieID: int64)</td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Retrieves the movie information from the Movie API and
+                      returns the movie information as an array of Strings.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      displayNotifications (notifiedUser: int64): String[ ]
+                    </td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Retrieves the users&rsquo; notifications from the
+                      Notifications API and returns the notifications as an
+                      array of Strings.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>genrePrefs</td>
+                    <td>float[]</td>
+                    <td>A user&rsquo;s genre preferences.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>genres</td>
+                    <td>tinyint[]</td>
+                    <td>
+                      The array of genres applicable to a particular movie.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getAction(): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Gets a boolean value for a record for the action they
+                      took.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getMovie(): Movie</td>
+                    <td>Method (backend)</td>
+                    <td>Gets a movie&rsquo;s information.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getMovieDesc(): String</td>
+                    <td>Method (backend)</td>
+                    <td>Gets a movie&rsquo;s description based on its ID.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getMovieForUser(): Movie</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Gets a movie that is relevant to a user by analyzing a
+                      user&rsquo;s preferences and previous actions.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getMovieGenres(): tinyint[]</td>
+                    <td>Method (backend)</td>
+                    <td>Gets a movie&rsquo;s genres based on its ID.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getMovieID(): int64</td>
+                    <td>Method (backend)</td>
+                    <td>Gets a movie&rsquo;s ID.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getMoviesByUser(): Movie[]</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Retrieve a list of movies that were liked by suggested
+                      user. The list returned contains the movie id&rsquo;s.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getMovieTitle(): String</td>
+                    <td>Method (backend)</td>
+                    <td>Gets a movie&rsquo;s title based on its ID.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getNotificationID(): int64</td>
+                    <td>Method (backend)</td>
+                    <td>Gets the ID of the notification.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getNotificationsByUser(): Notification[]</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Retrieves all of the notifications for a specific user. It
+                      will return an array of Notification objects.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getNotificationType(): enum</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Gets the notification type which is either THEATREINVITE
+                      or NEWMEMBER.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getNotificationUser(): User</td>
+                    <td>Method (backend)</td>
+                    <td>Gets the user that receives the notification.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getPassword(): String</td>
+                    <td>Method (backend)</td>
+                    <td>Gets the user&rsquo;s password.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getPrefs(): float[]</td>
+                    <td>Method (backend)</td>
+                    <td>Gets the user&rsquo;s preferences.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getTheatreID(): int64</td>
+                    <td>Method (backend)</td>
+                    <td>Gets the ID of the theatre.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getTheatreMatches(): Movie[]</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Gets all movies that have been liked by members in a
+                      theatre. It returns an array of movieIDs.&nbsp;
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getTheatreMembers(): User[]</td>
+                    <td>Method (backend)</td>
+                    <td>Gets an array of userIDs in a specific theatre.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getTheatreName(): String</td>
+                    <td>Method (backend)</td>
+                    <td>Gets the name of the theatre.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getTheatresByUser(): Theatre[]</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Given a userID, gets a list of theatres the user is a
+                      member of.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getTimestamp(): Timestamp</td>
+                    <td>Method (backend)</td>
+                    <td>Gets the timestamp for a specific record.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getUser(): User</td>
+                    <td>Method (backend)</td>
+                    <td>Gets a user&rsquo;s information.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getUserID(): String</td>
+                    <td>Method (backend)</td>
+                    <td>Gets the user&rsquo;s id.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getUsername(): String</td>
+                    <td>Method (backend)</td>
+                    <td>Gets the user&rsquo;s username.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: #333333">inviteeForm</span></td>
+                    <td>Form (frontend)</td>
+                    <td>
+                      Collects the inviteeID(int64) of the user that is being
+                      invited.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>inviteeUsername</td>
+                    <td>String</td>
+                    <td>
+                      The username of the watcher that a user wants to add to a
+                      theatre.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      inviteWatchers (theatreID: int64, inviteeUsername:
+                      String): Boolean
+                    </td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Sends the username of the invitee to the Theatre API to be
+                      added to the theatre. Calls searchWatchers to check
+                      whether invitee exists and returns a Boolean value of 1 if
+                      it does.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>leaveTheatre (theatreName:String, userID:int64)</td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Notifies the Theatre API to remove the user from the
+                      theatre.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>login(username: String, password: String): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Verifies that the username and password exist in the
+                      database. If the login is successful the client is sent an
+                      authorization token, otherwise sent an error message.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>LoginForm</td>
+                    <td>Form (frontend)</td>
+                    <td>
+                      Collects a users&rsquo; log-in information: username
+                      (String) and passwordInput (String).
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>matches</td>
+                    <td>Movie[]</td>
+                    <td>All movies commonly liked in a theatre.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>members</td>
+                    <td>User[]</td>
+                    <td>An array of users for watchers in a theatre.</td>
+                    <td>Maximum size is 100</td>
+                  </tr>
+                  <tr>
+                    <td>movie</td>
+                    <td>Movie</td>
+                    <td>A certain record&rsquo;s corresponding movie.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>Movie</td>
+                    <td>Class</td>
+                    <td>
+                      A story or event recorded by a camera as a set of moving
+                      images and shown in a theater or on television; a motion
+                      picture.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Movie(movieID: int64, title: String, description: String,
+                      genres: tinyint[]): Movie
+                    </td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Adds a new movie with the corresponding parameters to the
+                      database.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>movieID&nbsp;</td>
+                    <td>int64</td>
+                    <td>The ID that represents a movie.</td>
+                    <td>At least 30 characters long</td>
+                  </tr>
+                  <tr>
+                    <td>Notification</td>
+                    <td>Class</td>
+                    <td>the action of notifying someone or something.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Notification(notificationID: int64, notifiedUser: int64,
+                      notificationType: enum): Notification
+                    </td>
+                    <td>Method (backend)</td>
+                    <td>
+                      The constructor used to create a notification instance.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>notificationCount</td>
+                    <td>int64</td>
+                    <td>The number of notifications for a user.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span style="color: #333333">NotificationForm</span>
+                    </td>
+                    <td>Form (frontend)</td>
+                    <td>
+                      Collects a users&rsquo; decision to clear notifications.
+                      clearAll has a Boolean value of 1 if they select to clear
+                      all notifications. notificationID(int64) has a null value
+                      if they wish to clear all notifications, otherwise the ID
+                      of the notification they wish to clear is used.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>notificationID</td>
+                    <td>int64</td>
+                    <td>
+                      A unique ID that is assigned to each notification (used
+                      for internal use).
+                    </td>
+                    <td>At least 30 characters long</td>
+                  </tr>
+                  <tr>
+                    <td>notificationType</td>
+                    <td>enum</td>
+                    <td>The type of notification {TheatreInvite/NewMember}.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>notifiedUser</td>
+                    <td>User</td>
+                    <td>The user in which a notification corresponds to.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>password</td>
+                    <td>String</td>
+                    <td>A user&rsquo;s password.</td>
+                    <td>Between 8 - 16 characters long</td>
+                  </tr>
+                  <tr>
+                    <td>passwordInput</td>
+                    <td>String</td>
+                    <td>The inputted password by the user.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>Record</td>
+                    <td>Class</td>
+                    <td>
+                      Documentation of a user&rsquo;s response to a specific
+                      movie recommendation.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Record(user: User, movie: Movie, action: Boolean,
+                      timestamp: Timestamp): Record
+                    </td>
+                    <td>Method (backend)</td>
+                    <td>The constructor used to create a record instance.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      recordDecision(movieID: int64, userID:int64,
+                      action:Boolean, timestamp: Date)
+                    </td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Send the users&rsquo; decision (like or dislike) on a
+                      movie to the Record API.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>removeGenreFromMovie(genre: tinyint): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Removes a genre from a movie by deleting a row from the
+                      movie genre lookup table.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>removeMemberFromTheatre(user: User): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Given a userID, removes a user from the group of watchers
+                      in a theatre.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>resetPrefs(): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Resets a user&rsquo;s genre preferences to the default
+                      values.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>retrieveMovie (userID: int64)</td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Accesses Movie API to get a movie according to the
+                      users&rsquo; preferences. Returns the movie ID as an
+                      int64.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>searchWatchers (username: String): Boolean</td>
+                    <td>Method(frontend)</td>
+                    <td>
+                      Searches for username from the User API. Returns a Boolean
+                      value of 1 the userID if found.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>setMovieDesc(desc: String): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>Sets the description of a certain movie.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>setMovieTitle(title: String): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>Sets the title of a certain movie.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>setPassword(password: String): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>Updates the password of a specific user.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>setTheatreName(theatreName: String): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>Sets the name of the theatre.</td>
+                    <td>3 - 30 characters</td>
+                  </tr>
+                  <tr>
+                    <td>setUsername(username: String): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>Updates the username of a specific user.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      signUp (username: String, password: String,
+                      confirmPassword: String): Boolean
+                    </td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Method that verifies user&rsquo;s chosen username and
+                      password by calling on checkUserName and verifyPassword.
+                      Sends username and password to User API to create a new
+                      account if both password and username are verified.
+                      Returns a Boolean value of 1 if there is an error with the
+                      username or password.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>SignUpForm</td>
+                    <td>Form (frontend)</td>
+                    <td>
+                      Collects a users&rsquo; sign-up information: username
+                      (String), passwordInput (String) and verifyPassword
+                      (String).
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>Theatre</td>
+                    <td>Class</td>
+                    <td>A place to watch a movie.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Theatre(theatreID: int64, theatreName: String, members:
+                      User[], matches: Movie[]): Theatre
+                    </td>
+                    <td>Method (backend)</td>
+                    <td>The constructor used to create a theatre instance.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span style="color: #333333">theatreCreationForm</span>
+                    </td>
+                    <td>Form (frontend)</td>
+                    <td>
+                      Collects the theatreName (String) of&nbsp; the new
+                      theatre.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>theatreID&nbsp;</td>
+                    <td>int64</td>
+                    <td>A unique ID that is assigned to each theatre.</td>
+                    <td>At least 30 characters long</td>
+                  </tr>
+                  <tr>
+                    <td>theatreName</td>
+                    <td>String</td>
+                    <td>The name of a theatre created by a user.</td>
+                    <td>Between 3 - 30 characters long</td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: #333333">theatreViewForm</span></td>
+                    <td>Form (frontend)</td>
+                    <td>
+                      Collects the theatreID(int64) of the theatre they wish to
+                      view in detail.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>timestamp</td>
+                    <td>Date</td>
+                    <td>The time the user swiped on the movie.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>title</td>
+                    <td>String</td>
+                    <td>The title of a movie.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>updatePrefs(movie: Movie, action: Boolean): float[]</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Update&rsquo;s a user's genre preferences based on their
+                      latest response to a movie recommendation.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>user</td>
+                    <td>User</td>
+                    <td>A certain record&rsquo;s corresponding user.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>User</td>
+                    <td>Class</td>
+                    <td>A user of Flick.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      User(userid: int64, username: String, password: String,
+                      genrePrefs: float[]): User
+                    </td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Adds a new user to the database with the corresponding
+                      parameters.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>userID</td>
+                    <td>int64</td>
+                    <td>
+                      A unique ID that is assigned to each user (used for
+                      internal use)
+                    </td>
+                    <td>At least 30 characters long</td>
+                  </tr>
+                  <tr>
+                    <td>userLogin(username: String, password:String)</td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Sends username and password to User API to verify login
+                      credentials. Returns a Boolean value of 0 if an error
+                      message needs to be displayed.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>username</td>
+                    <td>String</td>
+                    <td>A unique name created by user.</td>
+                    <td>Between 3 - 25 characters long</td>
+                  </tr>
+                  <tr>
+                    <td><span style="color: #333333">UsernameForm</span></td>
+                    <td>Form (frontend)</td>
+                    <td>Collects a users&rsquo; new username (String).</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>validWatcher</td>
+                    <td>Boolean</td>
+                    <td>
+                      Returns 0 if the username searched to add to a theatre
+                      does not exist, 1 if the user is a validWatcher.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      verifyPassword(password:String, confirmPassword(String):
+                      Boolean
+                    </td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Checks whether the user has inputted the same password
+                      twice. Returns a Boolean value of 1 if passwords
+                      don&rsquo;t match.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>viewTheatre (theatreID: int64): String[ ]</td>
+                    <td>Method (frontend)</td>
+                    <td>
+                      Retrieves the theatres&rsquo; information (theatre name,
+                      members, list of matches) from the Theatre API and returns
+                      the information as an array of Strings.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>wipeRecordsBeforeDate(date: timestamp): Boolean</td>
+                    <td>Method (backend)</td>
+                    <td>
+                      Removes all records in the database before the requested
+                      date. Primarily used to clear the notification table every
+                      168 hours (1 week) in order to keep the table concise.
+                    </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- 9. Version History -->
+        <h1 id="version-history">9. Version History</h1>
+        <div class="section-info">
+          <div class="subsection-info">
+            <h3>Version 0.1</h3>
+            7/12/2021 Initial Draft & UML Diagrams
+            <ul>
+              <li>Alexander Dimitrakoudis</li>
+              <li>Amy Zhao</li>
+              <li>Andrew Liutiev</li>
+              <li>Cassidy Huang</li>
+              <li>Connor Kanalec</li>
+              <li>Kara Kim</li>
+              <li>Lavisha Bugreja</li>
+              <li>Matthew Dibble</li>
+              <li>Michael Veloso</li>
+              <li>Mustafa Raza</li>
+              <li>Scott Baker</li>
+              <li>Tharssan Srikanthan</li>
+              <li>Ya Jun Shao</li>
+            </ul>
+            <br />
+            <h3>Version 0.2</h3>
+            7/16/2021 Edits to System Overview, Design Considerations, API
+            Overview, and Interface Descriptions
+            <ul>
+              <li>Alexander Dimitrakoudis</li>
+              <li>Amy Zhao</li>
+              <li>Connor Kanalec</li>
+              <li>Michael Veloso</li>
+              <li>Tharssan Srikanthan</li>
+              <li>Ya Jun Shao</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 10. SQA -->
+        <h1 id="sqa">10. SQA</h1>
+        <div class="section-info">
+          <div class="subsection-info">
+            <table class="content-table">
+              <tbody>
+                <tr>
+                  <td><strong>No.</strong></td>
+                  <td><strong>Author</strong></td>
+                  <td><strong>v. In</strong></td>
+                  <td><strong>Description</strong></td>
+                  <td><strong>Status</strong></td>
+                  <td><strong>Explanation</strong></td>
+                  <td><strong>Verified By</strong></td>
+                  <td><strong>v. Out</strong></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Tharssan Srikanthan</td>
+                  <td>v0.1</td>
+                  <td>
+                    Movie Selection 3.2&nbsp;&ldquo;This list is shown to the
+                    user who will select movies that they want to watch to
+                    refine the profile of their movie
+                    preferences.&rdquo;&nbsp;&nbsp;Could there be better wording
+                    for this?
+                  </td>
+                  <td>Fixed</td>
+                  <td>&nbsp;</td>
+                  <td>Rough-draft team</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Tharssan Srikanthan&nbsp;</td>
+                  <td>v0.1</td>
+                  <td>
+                    Section 3&nbsp;This is just a reminder that there are a few
+                    yellow highlighted parts that haven&rsquo;t been
+                    solved.&nbsp;
+                  </td>
+                  <td>Fixed</td>
+                  <td>&nbsp;</td>
+                  <td>Rough-draft team</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Tharssan Srikanthan</td>
+                  <td>v0.1</td>
+                  <td>
+                    Section 3.2&nbsp;&ldquo;<strong>This w</strong>ill prevent
+                    repetitions of movies shown to users&rdquo;
+                  </td>
+                  <td>Fixed</td>
+                  <td>&nbsp;</td>
+                  <td>Rough-draft team</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Tharssan Srikanthan</td>
+                  <td>v0.1</td>
+                  <td>
+                    Section 3.3 Point 3&nbsp;&ldquo;Choosing the
+                    &ldquo;settings&rdquo; button, clicking the
+                    &ldquo;edit&rdquo; button beside the current theatre name
+                    and typing in the new theatre name&rdquo;
+                    <h5>
+                      The diagram in UserTheatreView (7.3.5) doesn&rsquo;t have
+                      a settings button. It has an edit button only.&nbsp;
+                    </h5>
+                  </td>
+                  <td>Dismissed</td>
+                  <td>
+                    This functionality is not currently included in our program
+                  </td>
+                  <td>Rough-draft team</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Tharssan Srikanthan</td>
+                  <td>v0.1</td>
+                  <td>
+                    Section 3.3 Point 3&nbsp;&ldquo;The name is not found on
+                    Flicks &ldquo;blacklist&rdquo; (names not allowed to
+                    used)&rdquo;We should decide if creating and implementing a
+                    &ldquo;blacklist&rdquo; is worth the time
+                  </td>
+                  <td>Dismissed</td>
+                  <td>
+                    This functionality is not currently included in our program.
+                    Added assumption that user will choose appropriate
+                    usernames.
+                  </td>
+                  <td>Rough-draft team</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Tharssan Srikanthan&nbsp;</td>
+                  <td>v0.1</td>
+                  <td>
+                    Section 3.4&ldquo;To view the commonly-liked movies among
+                    the theatre watchers, the user will have to select the
+                    desired theatre and select the &ldquo;View Matches&rdquo;
+                    button.&rdquo;&nbsp;Does not match the UserTheatreView
+                    (7.3.5) diagram.&nbsp;&nbsp;
+                  </td>
+                  <td>Fixed</td>
+                  <td>&nbsp;</td>
+                  <td>Rough-draft team</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Tharssan Srikanthan&nbsp;</td>
+                  <td>v0.1</td>
+                  <td>
+                    Section 3.4&ldquo;The contents of the page will only be
+                    changed through the individual theatre watcher&rsquo;s movie
+                    selections.&rdquo;&nbsp;Maybe change to:&nbsp;The contents
+                    of the page will only be changed when theatre watchers swipe
+                    through movies.&nbsp;&nbsp;
+                  </td>
+                  <td>Fixed</td>
+                  <td>&nbsp;</td>
+                  <td>Rough-draft team</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Tharssan Srikanthan</td>
+                  <td>v0.1</td>
+                  <td>Reminder to complete Section 4.3 and 4.4</td>
+                  <td>Fixed</td>
+                  <td>&nbsp;</td>
+                  <td>Rough-draft team</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Tharssan Srikanthan&nbsp;</td>
+                  <td>v0.1</td>
+                  <td>
+                    Section 6.0 API OverviewA suggestion to put N/A in the
+                    spaces that are empty in the table&nbsp;
+                  </td>
+                  <td>Fixed</td>
+                  <td>&nbsp;</td>
+                  <td>Rough-draft team</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Tharssan Srikanthan</td>
+                  <td>v0.1</td>
+                  <td>
+                    Section 6.1&ldquo;userid&rdquo;:
+                    &ldquo;18273897238012984710928631&rdquo;,&nbsp;In the
+                    UserProfile View we had the userid displayed. If they are
+                    going to be this long should we still display it?&nbsp;
+                  </td>
+                  <td>Fixed</td>
+                  <td>&nbsp;</td>
+                  <td>Rough-draft team</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>Tharssan Srikanthan&nbsp;</td>
+                  <td>v0.1</td>
+                  <td>
+                    Section 7.3&nbsp;In all of the different view tables should
+                    the data in the column &ldquo;Type&rdquo; be capitalized.
+                    Some are and others are not (ex. Input, anchor)&nbsp;&nbsp;
+                  </td>
+                  <td>Fixed</td>
+                  <td>All adjusted to lowercase</td>
+                  <td>Rough-draft team</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Tharssan Srikanthan</td>
+                  <td>v0.1</td>
+                  <td>
+                    Section 7.3.5Reminder to complete rename-button row&nbsp;
+                  </td>
+                  <td>Fixed</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>Tharssan Srikanthan</td>
+                  <td>v0.1</td>
+                  <td>
+                    Section 7.3.7&nbsp;I think we only need the picture with the
+                    error message.&nbsp;
+                  </td>
+                  <td>Fixed</td>
+                  <td>
+                    Kept the image, but changed the title to show an example of
+                    an error message on our program
+                  </td>
+                  <td>&nbsp;</td>
+                  <td>v0.2</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>Tharssan Srikanthan</td>
+                  <td>v0.1</td>
+                  <td>
+                    Data Dictionary&nbsp;Make sure all the descriptions are
+                    capitalized and have periods at the end.&nbsp;
+                  </td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>v0.2</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
