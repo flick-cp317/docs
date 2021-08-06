@@ -175,9 +175,8 @@
           </div>
           <h2>Movie Selection</h2>
           <div class="subsection-info">
-            Flick will generate a list of 10 movies based on a user’s movie
-            preferences. This list is shown to the user who will select movies
-            that they want to watch to refine the profile of their movie
+            Flick will generate a movie based on a user’s movie
+            preferences. The decision regarding the suggested movie will refine their profiles movie
             preferences.
             <ul class="subsubsection">
               <li>
@@ -185,19 +184,14 @@
                 all genres
               </li>
               <li>
-                Each selected movie will update the user’s rating of the main
-                genre for that movie<br />
+                Each selected movie will update the user’s rating of all
+                genres for that movie<br />
                 - The genre rating for selected movies will increase<br />
                 - The genre rating for non-selected movies will decrease
               </li>
               <li>
                 The composition of genre ratings will determine the list of
-                movies that the user will be subsequently shown<br />
-                - The list of movies will be updated continuously after each
-                change in rating<br />
-                - After each selection, a new movie will be added to the list to
-                maintain a constant number of movies<br />
-                - Random movies are introduced every 10 choices
+                movies that the user will be subsequently shown
               </li>
               <li>
                 The user’s choice for each movie will be recorded to keep track
@@ -221,20 +215,10 @@
                 Add watchers to a theatre - This can be done by selecting the
                 desired theatre, choosing the “settings” button, clicking the
                 “Add Watchers” button, searching for the desired user name and
-                selecting the “invite” button next to their username. There will
-                be no limit to the number of members within one theatre. Once a
+                selecting the “invite” button next to their username. There will a
+                limit of 100 members within one theatre. Once a
                 valid watcher (i.e. username exists in the database) is added to
                 the theatre, Flicks database will be updated accordingly.
-              </li>
-              <li>
-                Rename a theatre - This can be done by selecting the desired
-                theatre, choosing the “settings” button, clicking the “edit”
-                button beside the current theatre name and typing in the new
-                theatre name. The theatre name can be changed as many times and
-                it requires:<br />
-                - A minimum length of 3 characters<br />
-                - The name is not found on Flicks “blacklist” (names not allowed
-                to used)
               </li>
             </ul>
           </div>
@@ -284,7 +268,7 @@
             User inputs will have certain constraints based on length.
             <ul class="subsubsection">
               <li>Passwords must be between 8 - 16 characters long</li>
-              <li>Usernames must be between 3 - 25 characters long</li>
+              <li>Usernames must be between 3 - 30 characters long</li>
               <li>Theatre Names must be between 3 - 30 characters long</li>
             </ul>
             <br />
@@ -318,10 +302,9 @@
             <h3>High Level Package Diagram</h3>
             <img src="assets/high level package diagram.PNG" />
             <h3>Back-End Class Diagram</h3>
-            <img src="assets/back end class diagram 1.PNG" />
-            <img src="assets/back end class diagram 2.PNG" />
+            <img src="assets/back end class diagram.PNG" />
             <h3>Database Diagram</h3>
-            <img src="assets/database diagram 2.PNG" width="1400"/>
+            <img src="assets/UML Diagram.PNG" width="1400"/>
           </div>
         </div>
 
@@ -344,8 +327,11 @@
                   New User <br />
                   POST /api/user/new/
                 </td>
-                <td>Input text</td>
-                <td>The name of the user to verify</td>
+                <td>username: String
+                  <br />
+                  password: String
+                </td>
+                <td>{}</td>
               </tr>
               <tr>
                 <td>
@@ -359,7 +345,7 @@
                 </td>
                 <td>
                   token: String <br />
-                  userID: int
+                  userId: int
                 </td>
               </tr>
 
@@ -371,7 +357,7 @@
                 <td></td>
                 <td>
                   username: String <br />
-                  userid: int
+                  userId: int
                 </td>
               </tr>
 
@@ -474,7 +460,7 @@
                 <td>theatres: Theatre[]</td>
               </tr>
               <tr>
-                <td rowspan="2">Record</td>
+                <td rowspan="1">Record</td>
                 <td>
                   Add Record <br />
                   POST /api/record/
@@ -487,18 +473,10 @@
                 <td>{}</td>
               </tr>
               <tr>
-                <td>
-                  Getting User’s Liked Movies <br />
-                  GET /api/record/?id/
-                </td>
-                <td></td>
-                <td>movies: Movie[]</td>
-              </tr>
-              <tr>
                 <td rowspan="3">Notification</td>
                 <td>
                   Display User’s Notifications <br />
-                  GET /api/notification/?id/
+                  GET /api/notification/user/?id/
                 </td>
                 <td></td>
                 <td>notifications: Notification[]</td>
@@ -543,14 +521,12 @@
                 <td>
                   {<br />
                   <b>“username”:</b> “TestUser”,<br />
-                  <b>“password”:</b> “password123”,<br />
+                  <b>“password”:</b> “password123”<br />
                   }
                 </td>
-                <td>userid: int</td>
+                <td></td>
                 <td>
-                  {<br />
-                  <b>“userid”:</b> “18273897238012984710928631”,<br />
-                  }
+                  {}
                 </td>
               </tr>
               <tr>
@@ -563,14 +539,18 @@
                 <td>
                   {<br />
                   <b>“username”:</b> “TestUser”,<br />
-                  <b>“password”:</b> “password123”,<br />
+                  <b>“password”:</b> “password123”<br />
                   }
                 </td>
-                <td>token: string</td>
+                <td>
+                  token: string,<br />
+                  userid: int<br />
+                </td>
                 <td>
                   {<br />
                   <b>“token”:</b>
                   “eyJhbGcVCJ9.eyJ1c2VyaWUxNjIzOTAyMn0.1m6xC6ru6NEKwNI”,<br />
+                  "userid": "ca69395b-537f-4671-ac41-be8977139fb3"<br />
                   }
                 </td>
               </tr>
@@ -586,7 +566,7 @@
                 <td>
                   {<br />
                   <b>“username”:</b> “TestUser”,<br />
-                  <b>“userid”:</b> “123847982379273984892”,<br />
+                  <b>“userid”:</b> “123847982379273984892”<br />
                   }
                 </td>
               </tr>
@@ -600,7 +580,7 @@
                   }
                 </td>
                 <td>N/A</td>
-                <td></td>
+                <td>{}</td>
               </tr>
             </table>
           </div>
@@ -632,7 +612,7 @@
                   <b>“id”:</b> “12389827198729”,<br />
                   <b>“title”:</b> “Shrek 2”,<br />
                   <b>“desc”:</b> “Description”,<br />
-                  <b>“genres”:</b> [2, 3],<br />
+                  <b>“genres”:</b> [2, 3]<br />
                   }
                 </td>
               </tr>
@@ -652,7 +632,7 @@
                   <b>“id”:</b> “12389827198729”,<br />
                   <b>“title”:</b> “Shrek 2”,<br />
                   <b>“desc”:</b> “Description”,<br />
-                  <b>“genres”:</b> [2, 3],<br />
+                  <b>“genres”:</b> [2, 3]<br />
                   }
                 </td>
               </tr>
@@ -676,13 +656,19 @@
                 <td>name: String</td>
                 <td>
                   {<br />
-                  <b>“name”:</b> “Theatre Name”,<br />
+                  <b>“name”:</b> “Theatre Name”<br />
                   }
                 </td>
-                <td>id: int</td>
+                <td>
+                  Theatreid: int,<br />
+                  Userid: int,<br />
+                  Timestamp: timestamp<br />
+                  </td>
                 <td>
                   {<br />
-                  <b>“id”:</b> 1829389021908,<br />
+                    "theatreid": "529a23d1-5cbb-4c8b-959e-39a8i4cf8e69",<br />
+                    "userid": "ca69995b-507f-4671-ak39-be8977139fb3",<br />
+                    "timestamp": "2021-08-02T20:37:03.570Z"<br />
                   }
                 </td>
               </tr>
@@ -695,19 +681,10 @@
                 <td>
                   {<br />
                   <b>“members”:</b><br />
-                  [<br />
-                  {<br />
-                  <b>“username”:</b> “User1”,<br />
+                  [
                   <b>“userid”:</b> 1232152126,<br />
-                  },<br />
-                  {<br />
-                  <b>“username”:</b> “User2”,<br />
                   <b>“userid”:</b> 7654234876,<br />
-                  },<br />
-                  {<br />
-                  <b>“username”:</b> “User3”,<br />
                   <b>“userid”:</b> 2987886334,<br />
-                  },<br />
                   ],<br />
                   }
                 </td>
@@ -816,32 +793,6 @@
                 <td>N/A</td>
                 <td></td>
               </tr>
-              <tr>
-                <td>GET /api/record/?id/</td>
-                <td>Gets a user’s liked movies</td>
-                <td>N/A</td>
-                <td></td>
-                <td>movies: Object[]</td>
-                <td>
-                  {<br />
-                  <b>“movies”:</b> <br />
-                  [<br />
-                  {<br />
-                  <b>“id”:</b> “67545675674940”,<br />
-                  <b>“title”:</b> “Shrek 2”,<br />
-                  <b>“desc”:</b> “Movie”,<br />
-                  <b>“genres”:</b> [2, 3],<br />
-                  },<br />
-                  {<br />
-                  <b>“id”:</b> “23827198749847”,<br />
-                  <b>“title”:</b> “Shrek 3”,<br />
-                  <b>“desc”:</b> “Movie”,<br />
-                  <b>“genres”:</b> [1, 2],<br />
-                  },<br />
-                  ],<br />
-                  }
-                </td>
-              </tr>
             </table>
           </div>
           <h2>Notification API</h2>
@@ -856,7 +807,7 @@
                 <th><b>Response Example</b></th>
               </tr>
               <tr>
-                <td>GET /api/notification/?id/</td>
+                <td>GET /api/notification/user/?id/</td>
                 <td>Gets a user’s notifications</td>
                 <td>N/A</td>
                 <td></td>
@@ -1545,7 +1496,7 @@
                   </tr>
                   <tr>
                     <td>genres</td>
-                    <td>tinyint[]</td>
+                    <td>smallint[]</td>
                     <td>
                       The array of genres applicable to a particular movie.
                     </td>
@@ -1582,13 +1533,13 @@
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
-                    <td>getMovieGenres(): tinyint[]</td>
+                    <td>getMovieGenres(): smallint[]</td>
                     <td>Method (backend)</td>
                     <td>Gets a movie&rsquo;s genres based on its ID.</td>
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
-                    <td>getMovieID(): int64</td>
+                    <td>getMovieID(): UUID</td>
                     <td>Method (backend)</td>
                     <td>Gets a movie&rsquo;s ID.</td>
                     <td>&nbsp;</td>
@@ -1609,7 +1560,7 @@
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
-                    <td>getNotificationID(): int64</td>
+                    <td>getNotificationID(): UUID</td>
                     <td>Method (backend)</td>
                     <td>Gets the ID of the notification.</td>
                     <td>&nbsp;</td>
@@ -1624,7 +1575,7 @@
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
-                    <td>getNotificationType(): enum</td>
+                    <td>getNotificationType(): smallint</td>
                     <td>Method (backend)</td>
                     <td>
                       Gets the notification type which is either THEATREINVITE
@@ -2229,6 +2180,15 @@
               <li>Michael Veloso</li>
               <li>Tharssan Srikanthan</li>
               <li>Ya Jun Shao</li>
+            </ul>
+            <br />
+            <h3>Version 0.3</h3>
+            <b>8/02/2021 Final Revisions</b>
+            <ul>
+              <li>Kara Kim</li>
+              <li>Matthew Dibble</li>
+              <li>Michael Veloso</li>
+              <li>Scott Baker</li>
             </ul>
           </div>
         </div>
