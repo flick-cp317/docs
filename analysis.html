@@ -117,28 +117,36 @@
               <img src="assets/UML Legend.PNG">
 
               <h3>3.1.2 UML Diagram</h3>
+              <p></p>
               <img src="assets/UML Diagram.PNG" class="umldiagram"> 
 
           </div>
 
           <h2 id="state-diagrams">3.2 State Diagrams</h2>
+
           <div class="subsection-info">
+              
               <h3>3.2.1 State Diagram Legend</h3>
               <img src="assets/State Legend.PNG">
 
               <h3>3.2.2 User Controller</h3>
+              <p>Controller for the User. Manages user actions and views. Interconnected with the action classes.</p>
               <img src="assets/User Controller.PNG">
-
+              
               <h3>3.2.3 Movie Display Controller</h3>
+              <p>Works to display movies for the user to interact with, uses the record table to record actions the user takes.</p>
               <img src="assets/Movie Display Controller.PNG">
 
               <h3>3.2.4 Record Update Controller</h3>
+              <p>Controller to record the user actions on a displayed movie.</p>
               <img src="assets/Record Update Controller.PNG">
 
               <h3>3.2.5 User Notification Controller</h3>
+              <p>Controller to display and remove notifications for a specific user.</p>
               <img src="assets/User Notification Controller.PNG">
 
               <h3>3.2.6 Theatre Display Controller</h3>
+              <p>Controller to handle actions related to theatres and transition between theatre states.</p>
               <img src="assets/Theatre Display Controller.PNG">
           </div>
         </div>
@@ -159,9 +167,9 @@
                 </tr>
                 <tr>
                     <td>Action</td>
-                    <td>enum</td>
-                    <td>{Records}
-                        Enum that specifies the type of action a user performed on a movie [Like/Dislike] (required)
+                    <td>boolean</td>
+                    <td>{record}
+                        boolean that specifies the type of action a user performed on a movie [Like = true, Dislike = false] (required)
                         </td>
                 </tr>
                 <tr>
@@ -181,8 +189,8 @@
                 </tr>
                 <tr>
                     <td>Description</td>
-                    <td>String</td>
-                    <td>{Movies}
+                    <td>varchar[256]</td>
+                    <td>{movie}
                         Description of a specific movie
                         </td>
                 </tr>
@@ -207,24 +215,14 @@
                     <td>Displays movies to the user</td>
                 </tr>
                 <tr>
-                    <td>Genre</td>
-                    <td>String</td>
-                    <td>{User_Preferences}
-                        Used to indicate which genre a user’s rating pertains to (required) 
-                        </td>
+                    <td>genre</td>
+                    <td>Database Table</td>
+                    <td>A look-up table used to find the movies genre(s)</td>
                 </tr>
                 <tr>
-                    <td>Genre1</td>
-                    <td>String</td>
-                    <td>{Movies}
-                        A movie’s primary genre (required)</td>
-                </tr>
-                <tr>
-                    <td>Genre2</td>
-                    <td>String</td>
-                    <td>{Movies}
-                        A movie’s secondary genre                     
-                        </td>
+                    <td>genre</td>
+                    <td>smallint</td>
+                    <td>A smallint value that has a corresponding genre name tied to it. 0: "Action", 1: "Adventure", 2: "Comedy", 3: "Drama", 4: "Family", 5: "Fantasy", 6: "Horror", 7: "Romance"</td>
                 </tr>
                 <tr>
                     <td>Invite Watchers</td>
@@ -248,13 +246,13 @@
                 </tr>
                 <tr>
                     <td>movieID</td>
-                    <td>int64</td>
-                    <td>{Movies}
+                    <td>uuid</td>
+                    <td>{movie}
                         Movie ID meant for internal use (required, unique)
                         </td>
                 </tr>
                 <tr>
-                    <td>Movies</td>
+                    <td>movie</td>
                     <td>Database Table</td>
                     <td>A movie that can be recommended to Flick users to swipe on</td>
                 </tr>
@@ -266,27 +264,27 @@
                 </tr>
                 <tr>
                     <td>notificationID</td>
-                    <td>int64</td>
-                    <td>{Notifications}
+                    <td>uuid</td>
+                    <td>{notification}
                         Notification ID meant for internal use (required, unique)
                         </td>
                 </tr>
                 <tr>
-                    <td>Notifications</td>
+                    <td>notification</td>
                     <td>Database Table</td>
                     <td>All notifications received by users will be stored in this table</td>
                 </tr>
                 <tr>
                     <td>NotificationType</td>
-                    <td>enum</td>
-                    <td>{Notifications}
+                    <td>smallint</td>
+                    <td>{notification}
                         The type of a notification [TheatreInvite/NewMember] (required)
                         </td>
                 </tr>
                 <tr>
                     <td>Password</td>
-                    <td>String</td>
-                    <td>{Users}
+                    <td>varchar[256]</td>
+                    <td>{users}
                         A user’s password, used for logging in (required)
                         </td>
                 </tr>
@@ -302,8 +300,8 @@
                 </tr>
                 <tr>
                     <td>Rating</td>
-                    <td>Float</td>
-                    <td>{User_Preferences}
+                    <td>real</td>
+                    <td>{user_preferences}
                         A rating that corresponds to a user’s preference of a specific genre (required)
                         </td>
                 </tr>
@@ -318,7 +316,7 @@
                     <td>Movie records that were viewed by the user and records choice based on swiped</td>
                 </tr>
                 <tr>
-                    <td>Records</td>
+                    <td>record</td>
                     <td>Database Table</td>
                     <td>Each movie swiped by the Flick users will be stored in this table</td>
                 </tr>
@@ -343,7 +341,7 @@
                     <td>A customizable group of users to share movie matches</td>
                 </tr>
                 <tr>
-                    <td>Theatre_Users</td>
+                    <td>theatre_user</td>
                     <td>Database Table</td>
                     <td>Lookup table that stores every user and the corresponding theatres they are a part of</td>
                 </tr>
@@ -359,8 +357,8 @@
                 </tr>
                 <tr>
                     <td>Theatreid</td>
-                    <td>int64</td>
-                    <td>{Theatres}
+                    <td>uuid</td>
+                    <td>{theatre}
                         Theatre ID meant for internal use (required, unique)
                         </td>
                 </tr>
@@ -372,12 +370,12 @@
                 <tr>
                     <td>theatreName</td>
                     <td>String</td>
-                    <td>{Theatres}
+                    <td>{theatre}
                         Theatre name that is visible by users (required)
                         </td>
                 </tr>
                 <tr>
-                    <td>Theatres</td>
+                    <td>theatre</td>
                     <td>Database Table</td>
                     <td>Each theatre and its characteristics will be stored in this table
                     </td>
@@ -385,14 +383,14 @@
                 <tr>
                     <td>timestamp</td>
                     <td>Date</td>
-                    <td>{Records}
+                    <td>{record}
                         Time in which a user performed an action on a movie (required)
                         </td>
                 </tr>
                 <tr>
                     <td>title</td>
                     <td>String</td>
-                    <td>{Movies}
+                    <td>{movie}
                         Name of movie, contained within Movie database table
                         </td>
                 </tr>
@@ -412,7 +410,7 @@
                     <td>Informs users of various events (theatre invites and new watcher)</td>
                 </tr>
                 <tr>
-                    <td>User_Preferences</td>
+                    <td>user_preferences</td>
                     <td>Database Table</td>
                     <td>Look-up table that stores a user’s genre preferences</td>
                 </tr>
@@ -423,8 +421,8 @@
                 </tr>
                 <tr>
                     <td>userid</td>
-                    <td>int64</td>
-                    <td>{Users}
+                    <td>uuid</td>
+                    <td>{users}
                         User ID meant for internal use (required, unique)
                         </td>
                 </tr>
@@ -440,8 +438,8 @@
                 </tr>
                 <tr>
                     <td>username</td>
-                    <td>String</td>
-                    <td>{Users}
+                    <td>varchar[50]</td>
+                    <td>{users}
                         Customizable username meant to represent a user (required, unique)
                         </td>
                 </tr>
@@ -461,7 +459,7 @@
                     <td>The interface that allows user to view and edit their current profile preferences</td>
                 </tr>
                 <tr>
-                    <td>Users</td>
+                    <td>users</td>
                     <td>Database Table</td>
                     <td>Users of Flick will be stored in this table</td>
                 </tr>
@@ -562,6 +560,15 @@
             <ul class="subsubsection">
                 <li>Andrew Maxwell</li>
                 <li>Kara Kim</li>
+            </ul>
+            <br>
+            <h2>Version 0.6</h2>
+            <h3>8/02/2021 Final Revisions</h3>
+            <ul class="subsubsection">
+                <li>Kara Kim</li>
+                <li>Matthew Dibble</li>
+                <li>Michael Veloso</li>
+                <li>Scott Baker</li>
             </ul>
         </div>
         <br>
