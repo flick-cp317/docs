@@ -228,13 +228,13 @@
               <b>Login:</b> The login menu will be displayed each time the application has been opened, containing an input box for both a username and password. The log-in page will also contain a button to create a new profile.
               <br />
               <br />
-              <b>Sign-up:</b> Users will be prompted to complete a form with username and password fields, and a checklist of different genres to be selected. A Submit button will be displayed at the bottom of the form.              
+              <b>Sign-up:</b> Users will be prompted to complete a form with username and password fields. A Submit button will be displayed at the bottom of the form.              
               <br />
               <br />
-              <b>User Profile:</b> The user profile will be created for each unique user that has created an account on Flick. Within their profile, users will have the ability to update their username, age, movie genre preferences and view their previously selected movies (those they have swiped right on). The profile page will be divided into three sections for changes to user personal information, changes to genre preferences, and theatre match history.
+              <b>User Profile:</b> The user profile will be created for each unique user that has created an account on Flick. Within their profile, users will have the ability to update their username. 
               <br />
               <br />
-              <b>Movie Selection:</b> Once the user has created their profile, they can begin swiping on the movies they like. Users will be presented with a movie on the screen based on age-appropriateness and their preferences, and they can either swipe left if they don’t want to watch the movie, or swipe right if they do. Swiping will be done using the keyboard keys or by clicking on the respective buttons below the movie details. The user can continue swiping through movies until there is a common movie selected between their group.
+              <b>Movie Selection:</b> Once the user has created their profile, they can begin swiping on the movies they like. Users will be presented with a movie on the screen based on their preferences, and they can either swipe left if they don’t want to watch the movie, or swipe right if they do. Swiping will be done by clicking on the respective buttons below the movie details. The user can continue swiping through movies until there is a common movie selected between their group.
               <br />
               <br />
               <b>View Theatres:</b> Users will be able to view a list of all the theatres that they have joined and members within those theatres. They will also be able to create new theatres and add new members, which would prompt the theatre creation screen. Additionally, users can edit and leave theatres by opening a collapsed menu and selecting the corresponding option.
@@ -246,10 +246,8 @@
               <b>Theatre Creation:</b> Users will be able to create their own theatres, including naming the group and adding in users to join. This interface will include fields for the theatre name and list of members. To add a new group member, users will search for the respective usernames in a search bar and select the desired user(s) to be added to the list.
               <br />
               <br />
-              <b>Theatre Renaming:</b> Users will be able to rename their own theatres by opening a collapsed menu and selecting the rename option on the theatre’s page. This will prompt a form with an editable text field for the theatre name, and Confirm and Cancel buttons. 
+              <b>Notifications:</b> Users will be notified of changes to theatre members and invitations to new theatres. Clicking on the Notifications button will open a list of recent notifications, each marked as either new or already viewed.
               <br />
-              <br />
-              <b>Notifications:</b> Users will be notified of new theatre matches, changes to theatre members, and invitations to new theatres. Clicking on the Notifications button will open a list of recent notifications, each marked as either new or already viewed.
             </p>
           </div>
         </section>
@@ -282,7 +280,7 @@
                 <b>2.3.1 Login - </b> Involves logging into the web application by entering a username and password.
                 <br />
                 <br />
-                <b>2.3.2 Sign-up - </b>  Involves creating a profile that requires the new user to create a username, password and identify favourite movie genres, resulting in a newly created user on the web application.
+                <b>2.3.2 Sign-up - </b>  Involves creating a profile that requires the new user to create a username and password, resulting in a newly created user on the web application.
                 <br />
                 <br />
                 <b>2.3.3 Swipe Through Movies - </b> Involves selecting preferred movies by clicking the left button if you don't like the movie, and clicking the right button if you like the movie.
@@ -297,13 +295,10 @@
                 <b>2.3.6 Add Watchers - </b> Involves selecting the "Your Theatres" button and selecting the "+" button beside the name of the specific theatre you would like to add watchers to. Users can be added by searching their username in the provided search bar and selecting the specific username to be added.
                 <br />
                 <br />
-                <b>2.3.7 Rename Theatres - </b> Involves selecting the "Your Theatres" button and selecting the edit button beside the name of the theatre to change the name of one of your existing theatres with the new name.
+                <b>2.3.7 View Theatre Matches - </b> Involves selecting the "Your Theatres" button, followed by selecting the name of the specified theatre you would like to view matches for, in order to see the common matches.
                 <br />
                 <br />
-                <b>2.3.8 View Theatre Matches - </b> Involves selecting the "Your Theatres" button, followed by selecting the name of the specified theatre you would like to view matches for, in order to see the common matches.
-                <br />
-                <br />
-                <b>2.3.9 View Notifications - </b> Involves selecting the "Notifications" button to view relevant theatre notifications. This is where users can accept or decline theatre invites received.
+                <b>2.3.8 View Notifications - </b> Involves selecting the "Notifications" button to view relevant theatre notifications. 
                
               </p>
             </div>
@@ -334,13 +329,13 @@
           <h2 id="specific-functions">3.2 Functions</h2>
           <div class="subsection-info">
             <p>
-              Upon a login attempt, the system will check if the username and password exist in the database. If the username or password is incorrect, the system will prompt the user to try again or to create an account if they do not already have one. When creating an account, the system checks if the username and password are valid and if the username is unique amongst existing usernames in the database. On the movie selection page, movies are pulled from the database and displayed to the user, filtered based on a movie genre preferences algorithm. The system will store all movies the user swipes positively/negatively on in the database for the purposes of matching within theatres and ensuring that a user does not get repeatedly shown the same movie. The system also has the capability to check if a movie is commonly liked by all members of the user’s theatre. The theatre matches page will pull all the user’s theatres, theatre members, and commonly liked movies in theatres from the database and display it to the user. If a theatre has no commonly liked movies, it will prompt the user to keep swiping on movies to find one. When creating a new theatre on the theatre creation page, the system checks if the theatre name is valid and if the usernames of the users they invite exist in the database. Users who receive theatre invites can accept them on the notifications page and this will update them as a member of the theatre in the database, which is displayed on the theatre matches page.
+              Upon a login attempt, the system will check if the username and password exist in the database. If the username or password is incorrect, the system will prompt the user to try again or to create an account if they do not already have one. When creating an account, the system checks if the username and password are valid and if the username is unique amongst existing usernames in the database. On the movie selection page, movies are pulled from the database and displayed to the user, filtered based on a movie genre preferences algorithm. The system will store all movies the user swipes positively/negatively on in the database for the purposes of matching within theatres and ensuring that a user does not get repeatedly shown the same movie. The system also has the capability to check if a movie is commonly liked by all members of the user’s theatre. The theatre matches page will pull all the user’s theatres, theatre members, and commonly liked movies in theatres from the database and display it to the user. If a theatre has no commonly liked movies, it will prompt the user to keep swiping on movies to find one. When creating a new theatre on the theatre creation page, the system checks if the theatre name is valid and if the usernames of the users they invite exist in the database. Users who receive theatre invites will updated as a member of the theatre in the database, which is displayed on the theatre matches page.
             </p>
           </div>
           <h2 id="specific-database">3.3 Logical Database Requirements</h2>
           <div class="subsection-info">
             <p>
-              Our database will store information of users, theatres, and movies. Users will have a username, password, list of genre preferences, list of liked movies, list of theatres they are a member of, and a list of notifications. Theatres will have a theatre name, list of members in the theatre, and a list of commonly liked movies by all members of the theatre. Movies will have a movie name, list of genres, and rating.
+              Our database will store information of users, theatres, records, notifications and movies. Users will have a username, password, list of genre preferences, list of liked movies, list of theatres they are a member of, and a list of notifications. Theatres will have a theatre name, list of members in the theatre, and a list of commonly liked movies by all members of the theatre. Movies will have a movie name, list of genres, and a description.
             </p>
           </div>
           <h2 id="specific-portability">3.4 Portability</h2>
@@ -432,6 +427,18 @@
               <ul class="subsubsection">
                 <li>Amy Zhao</li>
                 <li>Kara Kim</li>
+              </ul>
+            </p>
+          </div>
+          <h3>Version 0.5</h3>
+          <div class="subsection-info subsubsection">
+            <p>8/02/2021 [Section 3] Final Revision
+              <ul class="subsubsection">
+                <li>Kara Kim</li>
+                <li>Matthew Dibble</li>
+                <li>Michael Veloso</li>
+                <li>Scott Baker</li>
+                <li>Alex Dimitrakoudis</li>
               </ul>
             </p>
           </div>
