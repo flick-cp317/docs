@@ -84,6 +84,13 @@
         <div class="section">
           <a class="section-header" href="#sqa">10. SQA</a>
         </div>
+
+        <!-- 11. Document Changes -->
+        <div class="section">
+          <a class="section-header" href="#document-changes"
+            >11. Document Changes</a
+          >
+        </div>
       </div>
     </div>
     <div id="content">
@@ -175,17 +182,17 @@
           </div>
           <h2>Movie Selection</h2>
           <div class="subsection-info">
-            Flick will generate a movie based on a user’s movie
-            preferences. The decision regarding the suggested movie will refine their profiles movie
-            preferences.
+            Flick will generate a movie based on a user’s movie preferences. The
+            decision regarding the suggested movie will refine their profiles
+            movie preferences.
             <ul class="subsubsection">
               <li>
                 The default preferences profile will be set to equal ratings for
                 all genres
               </li>
               <li>
-                Each selected movie will update the user’s rating of all
-                genres for that movie<br />
+                Each selected movie will update the user’s rating of all genres
+                for that movie<br />
                 - The genre rating for selected movies will increase<br />
                 - The genre rating for non-selected movies will decrease
               </li>
@@ -213,41 +220,40 @@
               </li>
               <li>
                 Add watchers to a theatre - This can be done by selecting the
-                desired theatre, choosing the “settings” button, clicking the
-                “Add Watchers” button, searching for the desired user name and
-                selecting the “invite” button next to their username. There will a
-                limit of 100 members within one theatre. Once a
-                valid watcher (i.e. username exists in the database) is added to
-                the theatre, Flicks database will be updated accordingly.
+                desired theatre, clicking the “Add Watcher” button, searching
+                for the desired user name and selecting the “invite” button next
+                to their username. There will a limit of 100 members within one
+                theatre. Once a valid watcher (i.e. username exists in the
+                database) is added to the theatre, Flicks database will be
+                updated accordingly.
+              </li>
+              <li>
+                Remove Watchers - This can be done by selecting the desired
+                theatre, clicking the "Remove Watcher" button, searching for the
+                desired username and submitting the request to remove the
+                watcher.
               </li>
             </ul>
           </div>
           <h2>Theatre Matches</h2>
           <div class="subsection-info">
             To view the commonly-liked movies among the theatre watchers, the
-            user will have to select the desired theatre and select the “View
-            Matches” button. The records of all theatre watchers will be
-            compared and common movies will be displayed. From this page, the
-            user will not have any ability to manipulate the data presented. The
-            contents of the page will only be changed through the individual
-            theatre watcher’s movie selections.
+            user will have to select the desired theatre. The records of all
+            theatre watchers will be compared and common movies will be
+            displayed. From this page, the user will not have any ability to
+            manipulate the data presented. The contents of the page will only be
+            changed through the individual theatre watcher’s movie selections.
           </div>
           <h2>Notifications</h2>
           <div class="subsection-info">
             All users will have their own notifications view.
             <ul class="subsubsection">
               <li>
-                An icon will appear to show users that they have new
-                notifications to review
-              </li>
-              <li>
                 A list of all notifications is displayed on the user’s profile
                 page
               </li>
               <li>
                 User can delete:<br />
-                - Individual Notifications - This can be done by clicking on a
-                trash can icon to the side of the notification<br />
                 - All Notifications - This can be done by selecting the “Clear
                 All” button at the top of the list
               </li>
@@ -278,9 +284,42 @@
             </ul>
           </div>
           <h2>Goals and Guidelines</h2>
-          <div class="subsection-info"></div>
+          <div class="subsection-info">
+            <ul>
+              <li>
+                Have a functioning program within budget and submitted by the
+                assigned deadline.
+              </li>
+              <li>Ease of use for the users</li>
+              <ul>
+                <li class="subsubsection">Easy to navigate</li>
+                <li class="subsubsection">
+                  User manual/FAQ to provide instructions on Flick&rsquo;s
+                  functionality
+                </li>
+              </ul>
+              <li>
+                To follow the Accessibility for Ontarians with Disabilities Act
+                (AODA) whenever applicable
+              </li>
+            </ul>
+          </div>
           <h2>Policies</h2>
-          <div class="subsection-info"></div>
+          <div class="subsection-info">
+            <p>
+              Control Flow: The front-end views (webpages) get information from
+              the controllers. The controllers talk to the back-end through the
+              API. The back-end classes talk to the database and queries for
+              this information. This information is then returned through the
+              chain to be displayed by the views (webpages)
+            </p>
+            <p>
+              When the user inputs information into the forms that needs to be
+              stored, this information is sent to the controllers. The
+              controllers then use the API to store the new information in the
+              database.
+            </p>
+          </div>
         </div>
 
         <!-- 5. System Architecture -->
@@ -302,9 +341,9 @@
             <h3>High Level Package Diagram</h3>
             <img src="assets/high level package diagram.PNG" />
             <h3>Back-End Class Diagram</h3>
-            <img src="assets/Design_Diagrams.svg" width="1400"/>
+            <img src="assets/Design_Diagrams.svg" width="1400" />
             <h3>Database Diagram</h3>
-            <img src="assets/UML Diagram.PNG" width="1400"/>
+            <img src="assets/UML Diagram.PNG" width="1400" />
           </div>
         </div>
 
@@ -327,7 +366,8 @@
                   New User <br />
                   POST /api/user/new/
                 </td>
-                <td>username: String
+                <td>
+                  username: String
                   <br />
                   password: String
                 </td>
@@ -525,9 +565,7 @@
                   }
                 </td>
                 <td></td>
-                <td>
-                  {}
-                </td>
+                <td>{}</td>
               </tr>
               <tr>
                 <td>POST /api/user/login/</td>
@@ -663,12 +701,12 @@
                   Theatreid: int,<br />
                   Userid: int,<br />
                   Timestamp: timestamp<br />
-                  </td>
+                </td>
                 <td>
                   {<br />
-                    "theatreid": "529a23d1-5cbb-4c8b-959e-39a8i4cf8e69",<br />
-                    "userid": "ca69995b-507f-4671-ak39-be8977139fb3",<br />
-                    "timestamp": "2021-08-02T20:37:03.570Z"<br />
+                  "theatreid": "529a23d1-5cbb-4c8b-959e-39a8i4cf8e69",<br />
+                  "userid": "ca69995b-507f-4671-ak39-be8977139fb3",<br />
+                  "timestamp": "2021-08-02T20:37:03.570Z"<br />
                   }
                 </td>
               </tr>
@@ -880,15 +918,6 @@
                 <td>
                   <ul>
                     <li>Error text and background</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td bgcolor="FFB648"></td>
-                <td>FFB648</td>
-                <td>
-                  <ul>
-                    <li>Accent Colour</li>
                   </ul>
                 </td>
               </tr>
@@ -1115,11 +1144,6 @@
                 <td>anchor</td>
                 <td>Redirects to UserProfileView</td>
               </tr>
-              <tr>
-                <td>notifications-alert</td>
-                <td>image</td>
-                <td>Displays how many notifications the user has</td>
-              </tr>
             </table>
             <br />
 
@@ -1172,11 +1196,6 @@
                 <td>Displays the users’ notifications</td>
               </tr>
               <tr>
-                <td>clearNotification-button</td>
-                <td>input button</td>
-                <td>Allows user to delete specific notification</td>
-              </tr>
-              <tr>
                 <td>clearAllNotifications-button</td>
                 <td>input button</td>
                 <td>Allows user to delete all notifications</td>
@@ -1211,11 +1230,6 @@
                 <td>theatre-theatresList</td>
                 <td>textbox</td>
                 <td>Displays the list of theatres the user is in</td>
-              </tr>
-              <tr>
-                <td>notifications-alert</td>
-                <td>image</td>
-                <td>Displays how many notifications the user has</td>
               </tr>
               <tr>
                 <td>theatreInvite-button</td>
@@ -1404,18 +1418,6 @@
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
-                    <td>
-                      clearNotification (notifiedUser: int64, notificationID:
-                      int64)
-                    </td>
-                    <td>Method (frontend)</td>
-                    <td>
-                      Accesses the Notifications API to clear the specific
-                      notification specified by its notification id.
-                    </td>
-                    <td>&nbsp;</td>
-                  </tr>
-                  <tr>
                     <td>clearNotification(): Boolean</td>
                     <td>Method (backend)</td>
                     <td>
@@ -1465,15 +1467,6 @@
                     <td>description</td>
                     <td>String</td>
                     <td>The description of a movie.</td>
-                    <td>&nbsp;</td>
-                  </tr>
-                  <tr>
-                    <td>displayMovie (movieID: int64)</td>
-                    <td>Method (frontend)</td>
-                    <td>
-                      Retrieves the movie information from the Movie API and
-                      returns the movie information as an array of Strings.
-                    </td>
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
@@ -1644,6 +1637,12 @@
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
+                    <td>getToken(): String</td>
+                    <td>Method (frontend)</td>
+                    <td>Returns user's authentication token</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
                     <td>getUser(): User</td>
                     <td>Method (backend)</td>
                     <td>Gets a user&rsquo;s information.</td>
@@ -1653,6 +1652,12 @@
                     <td>getUserID(): String</td>
                     <td>Method (backend)</td>
                     <td>Gets the user&rsquo;s id.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>getUserID: String</td>
+                    <td>Method (frontend)</td>
+                    <td>Returns user's ID</td>
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
@@ -1719,6 +1724,12 @@
                       Collects a users&rsquo; log-in information: username
                       (String) and passwordInput (String).
                     </td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>logOut:</td>
+                    <td>Method (frontend)</td>
+                    <td>Resets user's token and user's ID</td>
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
@@ -1905,15 +1916,6 @@
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
-                    <td>searchWatchers (username: String): Boolean</td>
-                    <td>Method(frontend)</td>
-                    <td>
-                      Searches for username from the User API. Returns a Boolean
-                      value of 1 the userID if found.
-                    </td>
-                    <td>&nbsp;</td>
-                  </tr>
-                  <tr>
                     <td>setMovieDesc(desc: String): Boolean</td>
                     <td>Method (backend)</td>
                     <td>Sets the description of a certain movie.</td>
@@ -1938,9 +1940,21 @@
                     <td>3 - 30 characters</td>
                   </tr>
                   <tr>
+                    <td>setToken(userToken: String):</td>
+                    <td>Method (frontend)</td>
+                    <td>Stores the user's token in session storage</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
                     <td>setUsername(username: String): Boolean</td>
                     <td>Method (backend)</td>
                     <td>Updates the username of a specific user.</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>setUserID(userID: String):</td>
+                    <td>Method (frontend)</td>
+                    <td>Stores the user's ID in session storage</td>
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
@@ -1951,11 +1965,11 @@
                     <td>Method (frontend)</td>
                     <td>
                       Method that verifies user&rsquo;s chosen username and
-                      password by calling on checkUserName and verifyPassword.
-                      Sends username and password to User API to create a new
-                      account if both password and username are verified.
-                      Returns a Boolean value of 1 if there is an error with the
-                      username or password.
+                      password by calling on a validation schema. Sends username
+                      and password to User API to create a new account if both
+                      password and username are verified. Returns a Boolean
+                      value of 1 if there is an error with the username or
+                      password.
                     </td>
                     <td>&nbsp;</td>
                   </tr>
@@ -1964,8 +1978,7 @@
                     <td>Form (frontend)</td>
                     <td>
                       Collects a users&rsquo; sign-up information: username
-                      (String), passwordInput (String) and verifyPassword
-                      (String).
+                      (String), passwordInput (String).
                     </td>
                     <td>&nbsp;</td>
                   </tr>
@@ -2102,19 +2115,6 @@
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
-                    <td>
-                      verifyPassword(password:String, confirmPassword(String):
-                      Boolean
-                    </td>
-                    <td>Method (frontend)</td>
-                    <td>
-                      Checks whether the user has inputted the same password
-                      twice. Returns a Boolean value of 1 if passwords
-                      don&rsquo;t match.
-                    </td>
-                    <td>&nbsp;</td>
-                  </tr>
-                  <tr>
                     <td>viewTheatre (theatreID: int64): String[ ]</td>
                     <td>Method (frontend)</td>
                     <td>
@@ -2160,7 +2160,7 @@
               <li>Tharssan Srikanthan</li>
               <li>Ya Jun Shao</li>
             </ul>
-            <br>
+            <br />
             <b>7/13/2021 UML Diagrams</b>
             <ul>
               <li>Amy Zhao</li>
@@ -2171,8 +2171,10 @@
             </ul>
             <br />
             <h3>Version 0.2</h3>
-            <b>7/16/2021 Edits to System Overview, Design Considerations, API
-              Overview, and Interface Descriptions</b>
+            <b
+              >7/16/2021 Edits to System Overview, Design Considerations, API
+              Overview, and Interface Descriptions</b
+            >
             <ul>
               <li>Alexander Dimitrakoudis</li>
               <li>Amy Zhao</li>
@@ -2183,12 +2185,23 @@
             </ul>
             <br />
             <h3>Version 0.3</h3>
-            <b>8/02/2021 Final Revisions</b>
+            <b>8/02/2021 Final Back-End Revisions</b>
             <ul>
               <li>Kara Kim</li>
               <li>Matthew Dibble</li>
               <li>Michael Veloso</li>
               <li>Scott Baker</li>
+            </ul>
+            <br />
+            <h3>Version 0.4</h3>
+            <b>8/07/2021 Front-End Adjustments to Match Implementation</b>
+            <ul>
+              <li>Amy Zhao</li>
+              <li>Andrew Maxwell</li>
+              <li>Cassidy Huang</li>
+              <li>Lavisha Bugreja</li>
+              <li>Tharssan Srikanthan</li>
+              <li>Ya Jun Shao</li>
             </ul>
           </div>
         </div>
@@ -2420,6 +2433,68 @@
               </tbody>
             </table>
           </div>
+        </div>
+
+        <!-- 10. SQA -->
+        <h1 id="document-changes">11. Document Changes</h1>
+        <div class="section-info subsection-info">
+          <ul>
+            <li>
+              3. System Overview - added &ldquo;Remove Watchers&rdquo;
+              functionality under Create/Manage Theatre, removed unnecessary
+              functions from Notifications and Theatre Matches
+            </li>
+            <li>
+              5. System Architecture - updated package names and methods to
+              match implementation, added UserAuthentication controller
+            </li>
+            <ul>
+              <li class="subsubsection">Updated Database diagram</li>
+              <li class="subsubsection">Updated Front-end Package diagrams</li>
+            </ul>
+            <li>
+              7. Interface Descriptions - removed notification-alert and
+              clear-notification-button
+            </li>
+            <li>
+              8. Data Dictionary - removed unnecessary methods and added new
+              user authentication methods
+            </li>
+          </ul>
+
+          <br />
+          <h3>Reasons for Changes:</h3>
+          <ul>
+            <li>
+              took out searchWatchers because it is already handled by the
+              back-end
+            </li>
+            <li>
+              took out displayMovie method because it is already handled by
+              retrieve movie
+            </li>
+            <li>
+              took out notifications on pages other than userProfile to
+              declutter pages
+            </li>
+            <li>
+              took out verifypassword, it was implemented into a validation
+              schema for user input instead
+            </li>
+            <li>checkUsername was handled by the back-end</li>
+            <li>
+              Notification clearing is now only for all notifications at once,
+              instead of just one - users would not likely have a reason to just
+              clear 1
+            </li>
+            <ul>
+              <li>removed clearNotification</li>
+            </ul>
+            <li>
+              removed alert for notification because user can view all
+              notifications on their profile page
+            </li>
+          </ul>
         </div>
 
         <!-- Stop here autoformat -->

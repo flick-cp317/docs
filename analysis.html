@@ -62,6 +62,11 @@
           <a class="section-header" href="#sqa">6. SQA</a>
         </div>
 
+        <!-- 6. SQA -->
+        <div class="section">
+            <a class="section-header" href="#document-changes">7. Document Changes</a>
+          </div>
+
       </div>
     </div>
     <div id="content">
@@ -93,6 +98,7 @@
                 <li><a href="#movie-controller">MovieDisplayController</a></li>
                 <li><a href="#user-notification-controller">UserNotificationController</a></li>
                 <li><a href="#record-update-controller">RecordUpdateController</a></li>
+                <li><a href="#authentication-controller">AuthenticationController</a></li>
             </ul>
             <br>
             <h3>Boundary Objects</h3>
@@ -104,6 +110,7 @@
                 <li><a href="#user-notification-view">UserNotificationView</a></li>
                 <li><a href="#theatre-creation-view">TheatreCreationView</a></li>
                 <li><a href="#theatre-invite-view">TheatreInviteView</a></li>
+                <li><a href="#theatre-remove-view">TheatreRemoveView</a></li>
             </ul>
             <br>
         </div>
@@ -171,6 +178,11 @@
                     <td>{record}
                         boolean that specifies the type of action a user performed on a movie [Like = true, Dislike = false] (required)
                         </td>
+                </tr>
+                <tr>
+                    <td id="authentication-controller">AuthenticationController</td>
+                    <td>Controller</td>
+                    <td>Controls the users' access to private pages</td>
                 </tr>
                 <tr>
                     <td>Change Username</td>
@@ -367,12 +379,18 @@
                     <td>Boundary Object</td>
                     <td>The interface that handles theatre invites, including searching for new watchers to add</td>
                 </tr>
+                
                 <tr>
                     <td>theatreName</td>
                     <td>String</td>
                     <td>{theatre}
                         Theatre name that is visible by users (required)
                         </td>
+                </tr>
+                <tr>
+                    <td id="theatre-remove-view">TheatreRemoveView</td>
+                    <td>Boundary Object</td>
+                    <td>The interface that handles removing watchers from theatres</td>
                 </tr>
                 <tr>
                     <td>theatre</td>
@@ -563,12 +581,22 @@
             </ul>
             <br>
             <h2>Version 0.6</h2>
-            <h3>8/02/2021 Final Revisions</h3>
+            <h3>8/02/2021 Final Back-End Revisions</h3>
             <ul class="subsubsection">
                 <li>Kara Kim</li>
                 <li>Matthew Dibble</li>
                 <li>Michael Veloso</li>
                 <li>Scott Baker</li>
+            </ul>
+            <h2>Version 0.7</h2>
+            <h3>8/07/2021 Front-End Adjustment to Match Implementation</h3>
+            <ul class="subsubsection">
+                <li>Amy Zhao</li>
+                <li>Andrew Maxwell</li>
+                <li>Cassidy Huang</li>
+                <li>Lavisha Bugreja</li>
+                <li>Tharssan Srikanthan</li>
+                <li>Ya Jun Shao</li>
             </ul>
         </div>
         <br>
@@ -885,6 +913,17 @@
                     <td>v0.5</td>
                 </tr>
             </table>
+        </div>
+        
+        <!-- 7. Document Changes -->
+        <h1 id="document-changes">7. Document Changes</h1>
+        <div class="subsection-info">
+            <p><span style="text-decoration: underline;"><strong>Analysis:</strong></span></p>
+            <ul>
+            <li>2. Object Classification - added AuthenticationController to Control Objects and TheatreRemoveView to Boundary Objects</li>
+            <li>3. Diagrams - added new objects to 3.1 and updated Remove Watcher action in 3.2.6</li>
+            <li>4. Data Dictionary - added definitions for new objects</li>
+            </ul>
         </div>
       </div>
     </div>

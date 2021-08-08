@@ -157,6 +157,14 @@
                 >
               </td>
             </tr>
+            <tr>
+              <td><span class="subsection-num">6</span></td>
+              <td>
+                <a class="subsection-header" href="#document-changes"
+                  >Document Changes</a
+                >
+              </td>
+            </tr>
           </table>
         </div>
       </div>
@@ -200,7 +208,9 @@
           </div>
           <h2 id="intro-references">1.4 References</h2>
           <div class="subsection-info">
-            <p>TBD</p>
+            <p><a href="https://bohr.wlu.ca/cp317/notes/IEEE_830.pdf">
+              IEEE Recommended Practice for Software Requirements Specifications
+            </a></p>
           </div>
           <h2 id="intro-overview">1.5 Overview</h2>
           <div class="subsection-info">
@@ -215,14 +225,14 @@
           <h2 id="desc-perspective">2.1 Product perspective</h2>
           <div class="subsection-info">
             <p>
-              Flick is a web-based application that uses React to create a front-end. It will utilize a manually created database that is based on a catalogue of various movies. However, this model can later be extended to other streaming services. A back-end database will also be used to enable user preference and movie organization.
+              Flick is a web-based application that uses React to create a front-end. It will utilize a manually created database that is based on a catalogue of various movies. A back-end database will also be used to enable user preference and movie organization.
             </p>
           </div>
           <section id = "userInterface">
           <h3>2.1.1 User Interface</h3>
           <div class="subsection-info subsubsection">
             <p>
-              Within the Flick web-app there are nine main user interfaces: login screen, sign-up screen, user profile section, movie selection, view theatres, view theatre matches, theatre creations, theatre renaming, and notifications. When a user accesses the app, they will be shown the login/sign-up screen.
+              Within the Flick web-app there are nine main user interfaces: login screen, sign-up screen, user profile section, movie selection, view theatres, theatre creations, invite/remove watchers and theatre renaming. When a user accesses the app, they will be shown the login/sign-up screen.
               <br />
               <br />
               <b>Login:</b> The login menu will be displayed each time the application has been opened, containing an input box for both a username and password. The log-in page will also contain a button to create a new profile.
@@ -231,22 +241,19 @@
               <b>Sign-up:</b> Users will be prompted to complete a form with username and password fields. A Submit button will be displayed at the bottom of the form.              
               <br />
               <br />
-              <b>User Profile:</b> The user profile will be created for each unique user that has created an account on Flick. Within their profile, users will have the ability to update their username. 
+              <b>User Profile:</b> The user profile will be created for each unique user that has created an account on Flick. Within their profile, users will have the ability to update their username. Users will be able to see all of their notifications within their user profile. Users will be notified of changes to theatre members and invitations to new theatres.
               <br />
               <br />
               <b>Movie Selection:</b> Once the user has created their profile, they can begin swiping on the movies they like. Users will be presented with a movie on the screen based on their preferences, and they can either swipe left if they don’t want to watch the movie, or swipe right if they do. Swiping will be done by clicking on the respective buttons below the movie details. The user can continue swiping through movies until there is a common movie selected between their group.
               <br />
               <br />
-              <b>View Theatres:</b> Users will be able to view a list of all the theatres that they have joined and members within those theatres. They will also be able to create new theatres and add new members, which would prompt the theatre creation screen. Additionally, users can edit and leave theatres by opening a collapsed menu and selecting the corresponding option.
+              <b>View Theatres:</b> Users will be able to view a list of all the theatres that they have joined and members within those theatres. When users click on a given theatre, they will also be able to view all matches within the theatre. They will also be able to create new theatres and add new members, which would prompt the theatre creation screen. Additionally, users can edit and leave theatres by opening a collapsed menu and selecting the corresponding option.
               <br />
               <br />
-              <b>View Theatre Matches:</b> Opening a specific theatre will show a list of its theatre matches.
+              <b>Theatre Creation:</b> Users will be able to create their own theatres, including naming the group and adding in users to join. To add a new group member, users will search for the respective usernames in a search bar and select the desired user(s) to be added to the list.
               <br />
               <br />
-              <b>Theatre Creation:</b> Users will be able to create their own theatres, including naming the group and adding in users to join. This interface will include fields for the theatre name and list of members. To add a new group member, users will search for the respective usernames in a search bar and select the desired user(s) to be added to the list.
-              <br />
-              <br />
-              <b>Notifications:</b> Users will be notified of changes to theatre members and invitations to new theatres. Clicking on the Notifications button will open a list of recent notifications, each marked as either new or already viewed.
+              <b>Invite/Remove Watchers:</b> Users will be able to invite or remove watchers to or from a given theatre.
               <br />
             </p>
           </div>
@@ -259,7 +266,7 @@
           <h2 id="desc-functions">2.2 Product functions</h2>
           <div class="subsection-info">
             <p>
-              Flick provides the user with the ability to create a profile containing movie preferences, create theatres, and select movies that they would enjoy watching. Selection will occur by users’ swiping left or right. Users will only see a single movie at a time during selection. Users will select movies based on their own preferences, which will be added to an individual list. The individual lists of all theatre members will be compiled and overlapping movies will be used for the theatre matches. In the theatre matches, theatre members will only be able to view movies that their theatre would like to watch (i.e. similar genres).
+              Flick provides the user with the ability to create a profile containing movie preferences, create theatres, and select movies that they would enjoy watching. Selection will occur by users 'liking' or 'disliking' a movie. Users will only see a single movie at a time during selection. Users will select movies based on their own preferences, which will be added to an individual list. The individual lists of all theatre members will be compiled and overlapping movies will be used for the theatre matches. In the theatre matches, theatre members will only be able to view movies that their theatre would like to watch (i.e. similar genres).
             </p>
           </div>
           <section id = "userCharacteristics">
@@ -272,7 +279,7 @@
               able to navigate the basic functions of their browsers. Users who
               have previous experience using the dating app Tinder will minimize
               the amount of time spent needed to become familiar with Flick, as
-              the swiping functions are similar.
+              the liking/disliking functions are similar.
             </p>
             <img src="assets/Flick - Use Cases UML.svg" alt="" width ="100%"/>
             <div class="subsection-info subsubsection">
@@ -283,7 +290,7 @@
                 <b>2.3.2 Sign-up - </b>  Involves creating a profile that requires the new user to create a username and password, resulting in a newly created user on the web application.
                 <br />
                 <br />
-                <b>2.3.3 Swipe Through Movies - </b> Involves selecting preferred movies by clicking the left button if you don't like the movie, and clicking the right button if you like the movie.
+                <b>2.3.3 Select Through Movies - </b> Involves selecting preferred movies by clicking the left button if you don't like the movie, and clicking the right button if you like the movie.
                 <br />
                 <br />
                 <b>2.3.4 View Theatres - </b> Involves selecting the "Your Theatres" button to view all theatres you've been added into.
@@ -298,7 +305,7 @@
                 <b>2.3.7 View Theatre Matches - </b> Involves selecting the "Your Theatres" button, followed by selecting the name of the specified theatre you would like to view matches for, in order to see the common matches.
                 <br />
                 <br />
-                <b>2.3.8 View Notifications - </b> Involves selecting the "Notifications" button to view relevant theatre notifications. 
+                <b>2.3.8 View Notifications - </b> Involves opening the user profile page to view relevant theatre notifications. 
                
               </p>
             </div>
@@ -329,7 +336,7 @@
           <h2 id="specific-functions">3.2 Functions</h2>
           <div class="subsection-info">
             <p>
-              Upon a login attempt, the system will check if the username and password exist in the database. If the username or password is incorrect, the system will prompt the user to try again or to create an account if they do not already have one. When creating an account, the system checks if the username and password are valid and if the username is unique amongst existing usernames in the database. On the movie selection page, movies are pulled from the database and displayed to the user, filtered based on a movie genre preferences algorithm. The system will store all movies the user swipes positively/negatively on in the database for the purposes of matching within theatres and ensuring that a user does not get repeatedly shown the same movie. The system also has the capability to check if a movie is commonly liked by all members of the user’s theatre. The theatre matches page will pull all the user’s theatres, theatre members, and commonly liked movies in theatres from the database and display it to the user. If a theatre has no commonly liked movies, it will prompt the user to keep swiping on movies to find one. When creating a new theatre on the theatre creation page, the system checks if the theatre name is valid and if the usernames of the users they invite exist in the database. Users who receive theatre invites will updated as a member of the theatre in the database, which is displayed on the theatre matches page.
+              Upon a login attempt, the system will check if the username and password exist in the database. If the username or password is incorrect, the system will prompt the user to try again or to create an account if they do not already have one. When creating an account, the system checks if the username and password are valid and if the username is unique amongst existing usernames in the database. On the movie selection page, movies are pulled from the database and displayed to the user, filtered based on a movie genre preferences algorithm. The system will store all movies the user selects positively/negatively on in the database for the purposes of matching within theatres and ensuring that a user does not get repeatedly shown the same movie. The system also has the capability to check if a movie is commonly liked by all members of the user’s theatre. The theatre matches page will pull all the user’s theatres, theatre members, and commonly liked movies in theatres from the database and display it to the user. When creating a new theatre on the theatre creation page, the system checks if the theatre name is valid and if the usernames of the users they invite exist in the database. Users who receive theatre invites will updated as a member of the theatre in the database, which is displayed on the theatre matches page.
             </p>
           </div>
           <h2 id="specific-database">3.3 Logical Database Requirements</h2>
@@ -432,13 +439,26 @@
           </div>
           <h3>Version 0.5</h3>
           <div class="subsection-info subsubsection">
-            <p>8/02/2021 [Section 3] Final Revision
+            <p>8/02/2021 [Section 3] Final Back-End Revision
               <ul class="subsubsection">
                 <li>Kara Kim</li>
                 <li>Matthew Dibble</li>
                 <li>Michael Veloso</li>
                 <li>Scott Baker</li>
                 <li>Alex Dimitrakoudis</li>
+              </ul>
+            </p>
+          </div>
+          <h3>Version 0.6</h3>
+          <div class="subsection-info subsubsection">
+            <p>8/07/2021 Front-End Adjustments to match implementation
+              <ul class="subsubsection">
+                <li>Amy Zhao</li>
+                <li>Andrew Maxwell</li>
+                <li>Cassidy Huang</li>
+                <li>Lavisha Bugreja</li>
+                <li>Tharssan Srikanthan</li>
+                <li>Ya Jun Shao</li>
               </ul>
             </p>
           </div>
@@ -458,6 +478,21 @@
                 <li>Tharssan Srikanthan</li>
                 <li>Timothy Arsan</li>
                 <li>Ya Jun Shao</li>
+              </ul>
+          </div>
+          <h2 id="document-changes">6. Document Changes</h2>
+          <div class="subsection-info">
+            <ul>
+              <li>1.4 References - added reference to IEEE Standard doc</li>
+              <li>2.1 Product Perspective - removed note about extending app to other streaming services (none were used)</li>
+              <li>2.1.1 User Interface - updated descriptions of pages to reflect implementation</li>
+              <li>2.1.2 Sample GUI - Update image after css styling</li>
+              <li>2.3 User Characteristics&nbsp;</li>
+              <ul>
+              <li class="subsubsection">UML: removed Accept/Decline Invite actions from View Notifications</li>
+              <li class="subsubsection">Text: removed &lsquo;swiping&rsquo; action and updated other user actions to match interface</li>
+              </ul>
+              <li>3.2 Functions - removed &lsquo;swiping&rsquo; action and updated to match interface</li>
               </ul>
           </div>
         </div>
